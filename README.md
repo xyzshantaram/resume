@@ -1,4 +1,4 @@
-# Siddharth Shankar Singh
+# Siddharth S Singh
 
 [me@shantaram.xyz](mailto:me@shantaram.xyz)
 
@@ -8,9 +8,9 @@
 **Languages spoken**: English _(fluent)_, Hindi _(native)_, Tamil
 _(conversational)_
 
-I'm a freelance software engineer with an interest in web development. I’m
-passionate about open-source software, and enjoy making things that improve the
-lives of people or spread joy in the world.
+I am a freelance software engineer with an interest in web development.
+I have a passion for open-source software, and enjoy making things that 
+improve the lives of people or spread happiness in the world.
 
 **Education**
 
@@ -31,12 +31,13 @@ lives of people or spread joy in the world.
 
 **Hobbies**
 - Reading (fiction, mostly)
-- a little writing here and there
+- A little writing here and there
 - Listening to music
 - Playing Dungeons and Dragons
 - Filmmaking
-- Programming (I'm currently learning Rust and Svelte)
+- Programming (I am currently learning Rust and Svelte)
 
+<!-- @block-start wkex #wk-experience -->
 **Work Experience**
 
 - **Socrates Club, VITC**, **Technology Secretary** (**2021-present**)
@@ -45,12 +46,14 @@ lives of people or spread joy in the world.
 - **Girl Up VIT Chennai**, **Technology** committee, Member, **2020-21** academic year
   - Built a definition generator using HTML5 canvas for a glossary of feminist
     terms
-- **Socrates Club VIT Chennai**’s **Design** committee, Member, **2020-21** academic year
+- **Socrates Club VIT Chennai**'s **Design** committee, Member, **2020-21** academic year
   - Designed and built the club's Web site
   <!-- TODO: add link -->
 - **Java development**, hobbyist **(2018-19)**
   - [**CouncilElection**](https://github.com/shantaram3013/CouncilElection) - An
     election suite I built for my school's student council election
+
+<!-- @block-end wkex -->
 
 **Selected projects**
 
