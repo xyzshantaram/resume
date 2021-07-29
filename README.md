@@ -1,9 +1,9 @@
 # Siddharth Shankar Singh
 
-#### [singh.siddharth.sh@gmail.com](mailto:singh.siddharth.sh@gmail.com) / [me@shantaram.xyz](mailto:me@shantaram.xyz)
+[me@shantaram.xyz](mailto:me@shantaram.xyz)
 
-- **https://shantaram.xyz**
-- **[GitHub profile](https://github.com/shantaram3013)**
+- https://shantaram.xyz
+- [GitHub profile](https://github.com/shantaram3013)
 
 **Languages spoken**: English _(fluent)_, Hindi _(native)_, Tamil
 _(conversational)_
@@ -24,24 +24,28 @@ lives of people or spread joy in the world.
   **CSS**
 - Working knowledge of **Java**, **C**, and **Svelte**
 - Working knowledge of **`git`** for version control
-- Proficient with setting up, using, and troubleshooting Linux systems,
-  comfortable with **`bash`** scripting and the command line.
-- Knowledge of network utilities such as **`ssh`**, **`nmap`**, **`netcat`**,
-  etc.
-- Proficient at video editing in Shotcut
-- Graphic design - a working knowledge of Canva and GIMP
+- Proficient with setting up, using, and troubleshooting Linux systems
+- Comfortable with **`bash`** scripting and the command line.
+- Knowledge of network utilities such as **`ssh`**, **`nmap`**, **`netcat`**, etc.
+
+
+**Hobbies**
+- Reading (fiction, mostly)
+- a little writing here and there
+- Listening to music
+- Playing Dungeons and Dragons
+- Filmmaking
+- Programming (I'm currently learning Rust and Svelte)
 
 **Work Experience**
 
-- Currently serving as **Technology Secretary** of the **Socrates Club, VITC**
-- **Web development**, freelance (**    2019-present**)
+- **Socrates Club, VITC**, **Technology Secretary** (**2021-present**)
+- **Web development**, freelance (**2019-present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio)
-- Served on **Girl Up VIT Chennai**’s **Technology** committee in the
-  **2020-21** academic year
+- **Girl Up VIT Chennai**, **Technology** committee, Member, **2020-21** academic year
   - Built a definition generator using HTML5 canvas for a glossary of feminist
     terms
-- Served on **Socrates Club VIT Chennai**’s **Design** committee in the
-  **2020-21** academic year
+- **Socrates Club VIT Chennai**’s **Design** committee, Member, **2020-21** academic year
   - Designed and built the club's Web site
   <!-- TODO: add link -->
 - **Java development**, hobbyist **(2018-19)**
@@ -60,3 +64,5 @@ lives of people or spread joy in the world.
   protocol.
 - https://github.com/shantaram3013/mkproj - A project initialisation script
   written in Python.
+- https://github.com/shantaram3013/cyblog - A static site generator written in
+  Deno.
