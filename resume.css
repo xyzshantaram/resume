@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+}
+
+@media print {
+    code {
+        font-family: 'Noto Sans Mono', monospace;
+        font-size: 0.95rem;
+    }
+
+    body {
+        max-width: 85vw;
+    }
+}
