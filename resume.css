@@ -2,6 +2,13 @@ body {
     background-color: white;
 }
 
+.cyblog-plug {
+    color: gray;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+}
+
 @media print {
     code {
         font-family: 'Noto Sans Mono', monospace;
