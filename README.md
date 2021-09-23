@@ -39,24 +39,27 @@ improve the lives of people or spread happiness in the world.
 
 <!-- @block-start wkex #wk-experience -->
 **Work Experience**
-
+- **Girl Up VIT Chennai**, **Technology Secretary** (**2021-present**)
 - **Socrates Club, VITC**, **Technology Secretary** (**2021-present**)
 - **Web development**, freelance (**2019-present**)
-  - [**Portfolio**](https://shantaram.xyz/portfolio)
+  - [**Portfolio**](https://shantaram.xyz/portfolio/)
 - **Girl Up VIT Chennai**, **Technology** committee, Member, **2020-21** academic year
   - Built a definition generator using HTML5 canvas for a glossary of feminist
     terms
 - **Socrates Club VIT Chennai**'s **Design** committee, Member, **2020-21** academic year
-  - Designed and built the club's Web site
-  <!-- TODO: add link -->
+  - Designed and built the club's [Web site](https://socratesclubvitc.github.io/)
 - **Java development**, hobbyist **(2018-19)**
   - [**CouncilElection**](https://github.com/xyzshantaram/CouncilElection) - An
-    election suite I built for my school's student council election
+    election suite I built for my school's student council election.
 
 <!-- @block-end wkex -->
 
 **Selected projects**
 
+- https://github.com/xyzshantaram/cyblog - A static site generator built with
+  Deno.
+- https://github.com/xyzshantaram/campfire - A web framework to simplify working
+  with the DOM to build reactive applications.
 - https://github.com/xyzshantaram/pseudows - A Windows 98 clone built with
   HTML5 and JavaScript.
 - https://github.com/xyzshantaram/covid19-resource-site - A website serving
@@ -67,8 +70,6 @@ improve the lives of people or spread happiness in the world.
   protocol.
 - https://github.com/xyzshantaram/mkproj - A project initialisation script
   written in Python.
-- https://github.com/xyzshantaram/cyblog - A static site generator written in
-  Deno.
 
 ---
 

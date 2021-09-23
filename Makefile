@@ -13,5 +13,6 @@ dist: clean
 	cyblog resume.cyblog --force -o index.html
 	wkhtmltopdf --print-media-type --disable-smart-shrinking index.html $(PDF)
 	rm resume.cyblog
+
 preview: dist
 	evince $(PDF)
