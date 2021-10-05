@@ -40,7 +40,7 @@ improve the lives of people or spread happiness in the world.
 <!-- @block-start wkex #wk-experience -->
 **Work Experience**
 - **Girl Up VIT Chennai**, **Technology Secretary** (**2021-present**)
-- **Socrates Club, VITC**, **Technology Secretary** (**2021-present**)
+- **Socrates Club, VITC**, **Technology Secretary** (**July - Oct 2021**)
 - **Web development**, freelance (**2019-present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
 - **Girl Up VIT Chennai**, **Technology** committee, Member, **2020-21** academic year
