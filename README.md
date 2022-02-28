@@ -15,7 +15,7 @@ of people or spread happiness in the world.
 **Education**
 
 - Currently pursuing a B.Tech degree in electrical and electronics engineering
-  from VIT University, Chennai (2020-24)
+  from VIT University, Chennai (2020 - 24)
 - Graduated from Army Public School, Chennai in 2020 with 91% marks.
 
 **Skills**
@@ -42,19 +42,19 @@ of people or spread happiness in the world.
 
 **Work Experience**
 
-- **Girl Up VIT Chennai**, **Technology Secretary** (**2021-present**)
+- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 - present**)
 - **Socrates Club, VITC**, **Technology Secretary** (**July - Oct 2021**)
-- **Web development**, freelance (**2019-present**)
+- **Web development**, freelance (**2019 - present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
-- **Girl Up VIT Chennai**, **Technology** committee, Member, **2020-21**
+- **Girl Up VIT Chennai**, **Technology** committee, Member, **2020 - 21**
   academic year
   - Built a definition generator using HTML5 canvas for a glossary of feminist
     terms
-- **Socrates Club VIT Chennai**'s **Design** committee, Member, **2020-21**
+- **Socrates Club VIT Chennai**'s **Design** committee, Member, **2020 - 21**
   academic year
   - Designed and built the club's
     [Web site](https://socratesclubvitc.github.io/)
-- **Java development**, hobbyist **(2018-19)**
+- **Java development**, hobbyist **(2018 - 19)**
   - [**CouncilElection**](https://github.com/xyzshantaram/CouncilElection) - An
     election suite I built for my school's student council election.
 
