@@ -42,7 +42,10 @@ of people or spread happiness in the world.
 
 **Work Experience**
 
-- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 - present**)
+- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 - 2022**)
+  - Built the
+    **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
+    site
 - **Socrates Club, VITC**, **Technology Secretary** (**July - Oct 2021**)
 - **Web development**, freelance (**2019 - present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
