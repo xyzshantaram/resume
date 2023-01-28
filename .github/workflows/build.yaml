@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo add-apt-repository ppa:phd/chromium-browser
           sudo apt update
-          apt-get install -fy make chromium-browser
+          sudo apt-get install -fy make chromium-browser
           git clone https://github.com/xyzshantaram/cyblog
           cd cyblog
           make compile
