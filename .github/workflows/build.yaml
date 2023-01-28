@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - cyblog-meta
+      - cyblog-footer.html
+      - Makefile
+
+jobs:
+  resume:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout the repo"
+        uses: actions/checkout@v3
+      - name: "Setup Deno"
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: "build"
+        run: |
+          sudo add-apt-repository ppa:phd/chromium-browser
+          sudo apt update
+          apt-get install -fy make chromium-browser
+          git clone https://github.com/xyzshantaram/cyblog
+          cd cyblog
+          make compile
+          export PATH="$PATH:$(pwd)"
+          cd ..
+          cd resume
+          make dist
+      - name: "commit changes"
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Built PDF and HTML page."
+          git push origin main

@@ -11,8 +11,7 @@ dist: clean
 	cp 'cyblog-meta' 'resume.cyblog'
 	cat 'README.md' >> 'resume.cyblog'
 	cyblog resume.cyblog --force -o index.html
-	# Needs wkhtmltopdf v0.12
-	wkhtmltopdf --print-media-type --disable-smart-shrinking index.html $(PDF)
+	chromium --headless --disable-gpu --no-margins --print-to-pdf=testing.pdf index.html
 
 preview: dist
 	evince $(PDF)
