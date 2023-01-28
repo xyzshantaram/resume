@@ -30,6 +30,7 @@ jobs:
           rm -rf cyblog-repo
           export PATH="$PATH:$(pwd)"
           make dist
+          rm cyblog
         continue-on-error: false
       - name: "commit changes"
         run: |
