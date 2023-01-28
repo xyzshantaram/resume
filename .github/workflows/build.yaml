@@ -24,11 +24,13 @@ jobs:
           sudo add-apt-repository ppa:phd/chromium-browser
           sudo apt update
           sudo apt-get install -fy make chromium-browser
-          git clone https://github.com/xyzshantaram/cyblog
-          cd cyblog
+          git clone https://github.com/xyzshantaram/cyblog cyblog-repo
+          cd cyblog-repo
           make compile
-          export PATH="$PATH:$(pwd)"
+          cp cyblog ..
           cd ..
+          rm -rf cyblog-repo
+          export PATH="$PATH:$(pwd)"
           make dist
         continue-on-error: false
       - name: "commit changes"
