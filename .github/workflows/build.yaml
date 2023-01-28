@@ -21,8 +21,6 @@ jobs:
           deno-version: v1.x
       - name: "build"
         run: |
-          sudo add-apt-repository ppa:phd/chromium-browser
-          sudo apt update
           sudo apt-get install -fy make chromium-browser
           git clone https://github.com/xyzshantaram/cyblog cyblog-repo
           cd cyblog-repo
