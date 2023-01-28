@@ -29,8 +29,8 @@ jobs:
           make compile
           export PATH="$PATH:$(pwd)"
           cd ..
-          cd resume
           make dist
+        continue-on-error: false
       - name: "commit changes"
         run: |
           git config user.name github-actions
