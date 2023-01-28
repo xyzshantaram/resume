@@ -19,9 +19,10 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
+      - name: "Install Chromium"
+        uses: browser-actions/setup-chrome@v1
       - name: "build"
         run: |
-          sudo apt-get install -fy make chromium-browser
           git clone https://github.com/xyzshantaram/cyblog cyblog-repo
           cd cyblog-repo
           make compile
