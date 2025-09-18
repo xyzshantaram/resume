@@ -11,7 +11,7 @@ dist: clean
 	cp 'cyblog-meta' 'resume.cyblog'
 	cat 'README.md' >> 'resume.cyblog'
 	cyblog resume.cyblog --force -o index.html
-	chromium --headless --disable-gpu --no-margins --print-to-pdf="$(PDF)" index.html
+	chromium --headless --disable-gpu --no-margins --no-sandbox --print-to-pdf="$(PDF)" index.html
 
 preview: dist
 	evince $(PDF)
