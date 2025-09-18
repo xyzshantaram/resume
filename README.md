@@ -49,7 +49,6 @@ of people or spread happiness in the world.
   - Managed CAD design, electronics, firmware, backend, and website.
   - Shipped working Wi-Fi connected devices with open-source firmware and public
     launch.
-
 - **Freelance Software Engineer** (**2019 – present**)
   - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
     for decentralized finance platform.
@@ -57,16 +56,13 @@ of people or spread happiness in the world.
     enterprise clients.
   - Maintained multiple client projects and independent contracts focused on
     full-stack development.
-
 - **Weavr DAO**, Front-end Engineer (**2022**)
   - Refactored and updated Vue.js codebase, building front-end components to
     interface with blockchain contracts.
-
 - **Girl Up VIT Chennai**, **Technology Secretary** (**2021 – 2022**)
   - Built the
     **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
     site.
-
 - **Web development**, freelance (**2019 – 2021**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
 
@@ -76,31 +72,24 @@ of people or spread happiness in the world.
 
 - [**The Attention Button**](https://theattentionbutton.in) – IoT desk toy for
   long-distance relationships. [GitHub](https://github.com/theattentionbutton)
-
 - [**Writers Jam**](https://writersjam.shantaram.xyz) – Weekly writing exercises
   for writers. An anti-social network.
   [GitHub](https://github.com/xyzshantaram/writers-jam)
-
 - [**Rite**](https://riteapp.co.in) – Distraction-free word processor and cloud
   backup service. [Editor source](https://github.com/xyzshantaram/rite),
   [Cloud source](https://github.com/xyzshantaram/rite-cloud)
-
 - [**Campfire**](https://xyzshantaram.github.io/campfire/) – A reactive web
   framework to simplify DOM work.
   [GitHub](https://github.com/xyzshantaram/campfire)
-
 - [**Tetron**](https://github.com/xyzshantaram/tetron) – A small game engine
   built in Rust.
-
 - [**COVID-19 Resources**](https://xyzshantaram.github.io/covid19-resource-site)
   – Live-updating resource finder using Google Sheets, served 2500+ people
   during India’s second wave of the COVID pandemic.
   [GitHub](https://github.com/xyzshantaram/covid19-resource-site)
-
 - [**pseudows**](https://xyzshantaram.github.io/pseudows/) – Fake Windows
   98-style desktop environment.
   [GitHub](https://github.com/xyzshantaram/pseudows)
-
 - [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
   Simple Rust key-value store with pluggable backends.
 

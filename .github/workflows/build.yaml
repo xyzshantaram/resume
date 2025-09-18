@@ -23,6 +23,7 @@ jobs:
         uses: browser-actions/setup-chrome@v1
       - name: "build"
         run: |
+          sudo apt install fonts-inter
           git clone https://github.com/xyzshantaram/cyblog cyblog-repo
           cd cyblog-repo
           make compile
