@@ -8,7 +8,7 @@
 **Languages spoken**: English _(fluent)_, Hindi _(native)_, Tamil
 _(conversational)_
 
-I am a freelance software engineer with an interest in web development. I have a
+Freelance software engineer with an interest in web development. I have a
 passion for open-source software, and enjoy making things that improve the lives
 of people or spread happiness in the world.
 
@@ -20,15 +20,12 @@ of people or spread happiness in the world.
 
 ## Skills
 
-- Proficient in **Python**, **TypeScript**, **JavaScript**, **HTML5**, and
-  **CSS**
-- Working knowledge of **Rust**, **C**, **Java**, **Svelte**, and **Angular**
+- Proficient in **TypeScript**, **Rust**, **JavaScript**, **HTML5**, and **CSS**
+- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
 - Experienced with **Vue.js**, **React**, and front-end ecosystems
-- Working knowledge of **`git`** for version control
 - Proficient with setting up, using, and troubleshooting Linux systems
-- Comfortable with **`bash`** scripting and the command line
-- Knowledge of network utilities such as **`ssh`**, **`nmap`**, **`netcat`**,
-  etc.
+- Experienced in electronics design and designing and shipping electronics
+  products
 
 ## Hobbies
 
@@ -37,7 +34,6 @@ of people or spread happiness in the world.
 - Listening to music
 - Playing Dungeons and Dragons
 - Filmmaking
-- Programming (recently focusing on Rust and TypeScript)
 
 <!-- @block-start wkex #wk-experience -->
 
@@ -45,10 +41,10 @@ of people or spread happiness in the world.
 
 - **Founder**, _The Attention Button_ (**2023 – present**)
   - Conceived, designed, and built an IoT hardware product for long-distance
-    connection.
+    connection from scratch.
   - Managed CAD design, electronics, firmware, backend, and website.
-  - Shipped working Wi-Fi connected devices with open-source firmware and public
-    launch.
+  - Shipped devices to consumers with open-source firmware, hardware, design
+    files, and public launch.
 - **Freelance Software Engineer** (**2019 – present**)
   - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
     for decentralized finance platform.
@@ -81,8 +77,6 @@ of people or spread happiness in the world.
 - [**Campfire**](https://xyzshantaram.github.io/campfire/) – A reactive web
   framework to simplify DOM work.
   [GitHub](https://github.com/xyzshantaram/campfire)
-- [**Tetron**](https://github.com/xyzshantaram/tetron) – A small game engine
-  built in Rust.
 - [**COVID-19 Resources**](https://xyzshantaram.github.io/covid19-resource-site)
   – Live-updating resource finder using Google Sheets, served 2500+ people
   during India’s second wave of the COVID pandemic.
