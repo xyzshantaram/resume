@@ -1,6 +1,7 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: white;
+    max-width: 80ch;
 }
 
 :root {
@@ -78,6 +79,6 @@ body>ul {
     }
 
     body {
-        max-width: 85vw;
+        max-width: unset;
     }
 }
