@@ -83,6 +83,6 @@ of people or spread happiness in the world.
 - [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
   Rust key-value store with pluggable backends
 
-–-
+---
 
-<!– @include cyblog-footer.html –>
+<!-- @include cyblog-footer.html -->
