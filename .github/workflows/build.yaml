@@ -7,6 +7,7 @@ on:
       - cyblog-meta
       - cyblog-footer.html
       - Makefile
+      - resume.css
   workflow_dispatch:
 
 jobs:
