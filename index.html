@@ -215,6 +215,14 @@ body {
     background-color: white;
 }
 
+:root {
+    font-size: 14px;
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
 .cyblog-plug {
     color: gray;
     font-size: 0.8rem;
@@ -222,11 +230,44 @@ body {
     text-align: center;
 }
 
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 li>p {
     margin: 0.4rem;
 }
 
-h1,
+li {
+    font-size: 0.9rem;
+}
+
+#wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#left-pane,
+#right-pane {
+    width: 50%;
+}
+
+#left-pane {
+    padding-right: 1rem;
+    border-right: 2px solid #aaa;
+}
+
+#right-pane {
+    padding-left: 1rem;
+}
+
+ul {
+    padding-inline-start: 0.8rem;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
 h2,
 h3,
 h4,
@@ -234,13 +275,6 @@ h5,
 h6 {
     margin-top: 0rem !important;
     margin-bottom: 0rem !important;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
     font-size: 1.2rem;
 }
 
@@ -266,40 +300,42 @@ body>ul {
 
 <body>
 <h1 id="siddharth-s-singh">Siddharth S Singh</h1>
+<div id=wrapper>
+<div id=left-pane>
+
+<div class=small>
+
 <p><a href="mailto:me@shantaram.xyz" >me@shantaram.xyz</a></p>
 <ul>
 <li><a href="https://shantaram.xyz" >https://shantaram.xyz</a></li>
 <li><a href="https://github.com/xyzshantaram" >GitHub profile</a></li>
 </ul>
 <p><strong>Languages spoken</strong>: English <em>(fluent)</em>, Hindi <em>(native)</em>, Tamil
-<em>(conversational)</em></p>
+<em>(conversational)</em><br><strong>Hobbies</strong>: Reading (fiction, mostly), creative writing, listening to music,
+Dungeons and Dragons, filmmaking</p>
+</div>
+
 <p>Freelance software engineer with an interest in web development. I have a
 passion for open-source software, and enjoy making things that improve the lives
 of people or spread happiness in the world.</p>
 <h2 id="education">Education</h2>
 <ul>
-<li>Graduated with a B.Tech degree in Electrical and Electronics Engineering from
-VIT University, Chennai (2020 – 2025, CGPA: 7.55).</li>
-<li>Graduated from Army Public School, Chennai in 2020 with 91% marks.</li>
+<li><strong>B.Tech Electrical and Electronics Engineering, VIT University, Chennai</strong>
+(2020 – 2025, CGPA: 7.55).</li>
+<li><strong>Army Public School, Chennai</strong>, (2020, 455/500)</li>
 </ul>
 <h2 id="skills">Skills</h2>
 <ul>
 <li>Proficient in <strong>TypeScript</strong>, <strong>Rust</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, and <strong>CSS</strong></li>
-<li>Working knowledge of <strong>C</strong>, <strong>Java</strong>, <strong>Svelte</strong>, and <strong>Python</strong></li>
-<li>Experienced with <strong>Vue.js</strong>, <strong>React</strong>, and front-end ecosystems</li>
+<li>Experienced with <strong>Vue.js</strong>, <strong>React</strong>, <strong>Angular</strong>, and front-end ecosystems</li>
 <li>Proficient with setting up, using, and troubleshooting Linux systems</li>
+<li>Working knowledge of <strong>C</strong>, <strong>Java</strong>, <strong>Svelte</strong>, and <strong>Python</strong></li>
 <li>Experienced in electronics design and designing and shipping electronics
 products</li>
 </ul>
-<h2 id="hobbies">Hobbies</h2>
-<ul>
-<li>Reading (fiction, mostly)</li>
-<li>Creative writing</li>
-<li>Listening to music</li>
-<li>Playing Dungeons and Dragons</li>
-<li>Filmmaking</li>
-</ul>
-<div id="wk-experience">
+</div>
+
+<div id=right-pane>
 
 <h2 id="work-experience">Work Experience</h2>
 <ul>
@@ -312,6 +348,7 @@ files, and public launch.</li>
 </ul>
 </li>
 <li><strong>Freelance Software Engineer</strong> (<strong>2019 – present</strong>)<ul>
+<li><a href="https://shantaram.xyz/portfolio/" ><strong>Portfolio</strong></a></li>
 <li><strong>Fractional Finance (later Frabric)</strong> – Built Vue.js/Ethereum integrations
 for decentralized finance platform.</li>
 <li><strong>Ready Cloud Consulting</strong> – Developed Angular front-end components for
@@ -320,22 +357,14 @@ enterprise clients.</li>
 full-stack development.</li>
 </ul>
 </li>
-<li><strong>Weavr DAO</strong>, Front-end Engineer (<strong>2022</strong>)<ul>
-<li>Refactored and updated Vue.js codebase, building front-end components to
-interface with blockchain contracts.</li>
-</ul>
-</li>
 <li><strong>Girl Up VIT Chennai</strong>, <strong>Technology Secretary</strong> (<strong>2021 – 2022</strong>)<ul>
 <li>Built the
 <strong><a href="https://github.com/girlupvitc/grant-a-wish/tree/main/src" >Grant-A-Wish</a></strong>
 site.</li>
 </ul>
 </li>
-<li><strong>Web development</strong>, freelance (<strong>2019 – 2021</strong>)<ul>
-<li><a href="https://shantaram.xyz/portfolio/" ><strong>Portfolio</strong></a></li>
 </ul>
-</li>
-</ul>
+</div>
 </div>
 
 <h2 id="selected-projects">Selected Projects</h2>
