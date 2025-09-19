@@ -24,7 +24,7 @@ of people or spread happiness in the world.
 ## Education
 
 - **B.Tech Electrical and Electronics Engineering, VIT University, Chennai**
-  (2020 -- 2025, CGPA: 7.55).
+  (2020 – 2025, CGPA: 7.55).
 - **Army Public School, Chennai** (2020, 455/500)
 
 ## Skills
@@ -42,21 +42,21 @@ of people or spread happiness in the world.
 
 ## Work Experience
 
-- **Freelance Software Engineer** (**2019 -- present**)
+- **Freelance Software Engineer** (**2019 – present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
-  - **Fractional Finance (later Frabric)** -- Built Vue.js/Ethereum integrations
+  - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
     for decentralized finance platform.
-  - **Ready Cloud Consulting** -- Developed Angular front-end components for
+  - **Ready Cloud Consulting** – Developed Angular front-end components for
     enterprise clients.
   - Handled multiple client projects and independent contracts in full-stack
     development.
-- **Founder**, _The Attention Button_ (**Feb 2025 -- present**)
+- **Founder**, _The Attention Button_ (**Feb 2025 – present**)
   - Conceived, designed, and built an IoT hardware product for long-distance
     connection from scratch.
   - Managed CAD design, electronics, firmware, backend, and website.
   - Shipped devices to consumers with open-source firmware, hardware, design
     files, and public launch.
-- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 -- 2022**)
+- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 – 2022**)
   - Built the
     **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
     site.
@@ -67,22 +67,22 @@ of people or spread happiness in the world.
 ## Selected Projects
 
 - [**Writers Jam**](https://writersjam.shantaram.xyz) - Weekly writing exercises
-  for writers -- an anti-social network.
+  for writers – an anti-social network.
   [GitHub](https://github.com/xyzshantaram/writers-jam)
-- [**rite-cloud**](https://riteapp.co.in) -- Cloud sync service for the
+- [**rite-cloud**](https://riteapp.co.in) – Cloud sync service for the
   [rite text editor](https://github.com/xyzshantaram/rite), written in Rust.
   [GitHub](https://github.com/xyzshantaram/rite-cloud)
-- [**Campfire**](https://xyzshantaram.github.io/campfire/) -- A cozy web
+- [**Campfire**](https://xyzshantaram.github.io/campfire/) – A cozy web
   framework [GitHub](https://github.com/xyzshantaram/campfire)
 - [**COVID-19 Resources**](https://xyzshantaram.github.io/covid19-resource-site)
-  -- Live-updating resource finder using Google Sheets
+  – Live-updating resource finder using Google Sheets
   [GitHub](https://github.com/xyzshantaram/covid19-resource-site)
-- [**pseudows**](https://xyzshantaram.github.io/pseudows/) -- Fake Windows
+- [**pseudows**](https://xyzshantaram.github.io/pseudows/) – Fake Windows
   98-style desktop environment
   [GitHub](https://github.com/xyzshantaram/pseudows)
-- [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) --
+- [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
   Rust key-value store with pluggable backends
 
----
+–-
 
-<!-- @include cyblog-footer.html -->
+<!– @include cyblog-footer.html –>
