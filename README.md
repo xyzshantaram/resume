@@ -1,12 +1,21 @@
 # Siddharth S Singh
 
+<div id=wrapper>
+<div id=left-pane>
+
+<div class=small>
+
 [me@shantaram.xyz](mailto:me@shantaram.xyz)
 
 - <https://shantaram.xyz>
 - [GitHub profile](https://github.com/xyzshantaram)
 
 **Languages spoken**: English _(fluent)_, Hindi _(native)_, Tamil
-_(conversational)_
+_(conversational)_\
+**Hobbies**: Reading (fiction, mostly), creative writing, listening to music,
+Dungeons and Dragons, filmmaking
+
+</div>
 
 Freelance software engineer with an interest in web development. I have a
 passion for open-source software, and enjoy making things that improve the lives
@@ -14,28 +23,22 @@ of people or spread happiness in the world.
 
 ## Education
 
-- Graduated with a B.Tech degree in Electrical and Electronics Engineering from
-  VIT University, Chennai (2020 – 2025, CGPA: 7.55).
-- Graduated from Army Public School, Chennai in 2020 with 91% marks.
+- **B.Tech Electrical and Electronics Engineering, VIT University, Chennai**
+  (2020 – 2025, CGPA: 7.55).
+- **Army Public School, Chennai**, (2020, 455/500)
 
 ## Skills
 
 - Proficient in **TypeScript**, **Rust**, **JavaScript**, **HTML5**, and **CSS**
-- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
-- Experienced with **Vue.js**, **React**, and front-end ecosystems
+- Experienced with **Vue.js**, **React**, **Angular**, and front-end ecosystems
 - Proficient with setting up, using, and troubleshooting Linux systems
+- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
 - Experienced in electronics design and designing and shipping electronics
   products
 
-## Hobbies
+</div>
 
-- Reading (fiction, mostly)
-- Creative writing
-- Listening to music
-- Playing Dungeons and Dragons
-- Filmmaking
-
-<!-- @block-start wkex #wk-experience -->
+<div id=right-pane>
 
 ## Work Experience
 
@@ -46,23 +49,20 @@ of people or spread happiness in the world.
   - Shipped devices to consumers with open-source firmware, hardware, design
     files, and public launch.
 - **Freelance Software Engineer** (**2019 – present**)
+  - [**Portfolio**](https://shantaram.xyz/portfolio/)
   - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
     for decentralized finance platform.
   - **Ready Cloud Consulting** – Developed Angular front-end components for
     enterprise clients.
   - Maintained multiple client projects and independent contracts focused on
     full-stack development.
-- **Weavr DAO**, Front-end Engineer (**2022**)
-  - Refactored and updated Vue.js codebase, building front-end components to
-    interface with blockchain contracts.
 - **Girl Up VIT Chennai**, **Technology Secretary** (**2021 – 2022**)
   - Built the
     **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
     site.
-- **Web development**, freelance (**2019 – 2021**)
-  - [**Portfolio**](https://shantaram.xyz/portfolio/)
 
-<!-- @block-end wkex -->
+</div>
+</div>
 
 ## Selected Projects
 
