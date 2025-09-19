@@ -66,26 +66,22 @@ of people or spread happiness in the world.
 
 ## Selected Projects
 
-- [**The Attention Button**](https://theattentionbutton.in) – IoT desk toy for
-  long-distance relationships. [GitHub](https://github.com/theattentionbutton)
-- [**Writers Jam**](https://writersjam.shantaram.xyz) – Weekly writing exercises
+- [**Writers Jam**](https://writersjam.shantaram.xyz) - Weekly writing exercises
   for writers. An anti-social network.
   [GitHub](https://github.com/xyzshantaram/writers-jam)
-- [**Rite**](https://riteapp.co.in) – Distraction-free word processor and cloud
-  backup service. [Editor source](https://github.com/xyzshantaram/rite),
-  [Cloud source](https://github.com/xyzshantaram/rite-cloud)
-- [**Campfire**](https://xyzshantaram.github.io/campfire/) – A reactive web
-  framework to simplify DOM work.
-  [GitHub](https://github.com/xyzshantaram/campfire)
+- [**rite-cloud**](https://riteapp.co.in) – Cloud sync service for the
+  [rite text editor](https://github.com/xyzshantaram/rite), written in Rust.
+  [GitHub](https://github.com/xyzshantaram/rite-cloud)
+- [**Campfire**](https://xyzshantaram.github.io/campfire/) – A cozy web
+  framework [GitHub](https://github.com/xyzshantaram/campfire)
 - [**COVID-19 Resources**](https://xyzshantaram.github.io/covid19-resource-site)
-  – Live-updating resource finder using Google Sheets, served 2500+ people
-  during India’s second wave of the COVID pandemic.
+  – Live-updating resource finder using Google Sheets
   [GitHub](https://github.com/xyzshantaram/covid19-resource-site)
 - [**pseudows**](https://xyzshantaram.github.io/pseudows/) – Fake Windows
-  98-style desktop environment.
+  98-style desktop environment
   [GitHub](https://github.com/xyzshantaram/pseudows)
 - [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
-  Simple Rust key-value store with pluggable backends.
+  Rust key-value store with pluggable backends
 
 ---
 
