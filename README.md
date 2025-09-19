@@ -42,12 +42,6 @@ of people or spread happiness in the world.
 
 ## Work Experience
 
-- **Founder**, _The Attention Button_ (**2023 – present**)
-  - Conceived, designed, and built an IoT hardware product for long-distance
-    connection from scratch.
-  - Managed CAD design, electronics, firmware, backend, and website.
-  - Shipped devices to consumers with open-source firmware, hardware, design
-    files, and public launch.
 - **Freelance Software Engineer** (**2019 – present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
   - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
@@ -56,6 +50,12 @@ of people or spread happiness in the world.
     enterprise clients.
   - Maintained multiple client projects and independent contracts focused on
     full-stack development.
+- **Founder**, _The Attention Button_ (**Feb 2025 – present**)
+  - Conceived, designed, and built an IoT hardware product for long-distance
+    connection from scratch.
+  - Managed CAD design, electronics, firmware, backend, and website.
+  - Shipped devices to consumers with open-source firmware, hardware, design
+    files, and public launch.
 - **Girl Up VIT Chennai**, **Technology Secretary** (**2021 – 2022**)
   - Built the
     **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
