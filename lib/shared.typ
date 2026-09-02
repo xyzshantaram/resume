@@ -42,39 +42,11 @@
   }
 }
 
-// The contact line under the name. basic-resume joins its own contact items with
-// "  |  " and offers no hook to change that, so the resumes pass no contact fields
-// and call this instead. Each item is (icon, label, url); url "" renders as text.
-#let contact(items) = {
-  let parts = items.map(it => {
-    let (icon, label, url) = it
-    let mark = box(image("icons/" + icon + ".svg", height: 0.98em), baseline: 0.18em)
-    let body = if url == "" { label } else { link(url)[#label] }
-    box[#mark#h(0.34em)#body]
-  })
-  context {
-    if target() == "html" {
-      // The icons and the horizontal spacing do not survive export, so drop the
-      // icons and join the items with a visible separator.
-      let plain = items.map(it => {
-        let (icon, label, url) = it
-        if url == "" { label } else { html.elem("a", attrs: (href: url), label) }
-      })
-      let sep = html.elem("span", attrs: (class: "sep"), "·")
-      html.elem("p", attrs: (class: "contact"), plain.intersperse(sep).fold(none, (a, b) => if a == none { b } else { a + b }))
-    } else {
-      // Sit close under the name, then leave a clear gap before the summary so the
-      // row reads as part of the heading rather than as the first line of the text.
-      block(above: 0.1em, below: 1.7em, text(size: 0.95em, parts.join(h(1.15em))))
-    }
-  }
-}
-
 // Host icons for the link column. GitHub, GitLab, and JSR are simple-icons marks
 // recoloured to the accent; the video and globe marks are hand-drawn. The icon
 // carries the host, so the visible label drops the domain and keeps the path.
-#let host-icon(url) = {
-  let mark = if url.starts-with("github.com/") {
+#let host-icon-path(url) = {
+  if url.starts-with("github.com/") {
     "icons/github.svg"
   } else if url.starts-with("gitlab.com/") {
     "icons/gitlab.svg"
@@ -85,9 +57,16 @@
   } else {
     "icons/globe.svg"
   }
-  box(image(mark, height: 0.86em), baseline: 0.14em)
+}
+
+#let host-icon(url) = {
+  box(image(host-icon-path(url), height: 0.86em), baseline: 0.14em)
   h(0.3em)
 }
+
+// The same mark for HTML. Typst export turns `image` into an inline data URI,
+// so the icon needs no separate file next to the page. CSS sizes it.
+#let icon-html(path) = html.elem("span", attrs: (class: "icon"), image(path))
 
 // One compact project line: bold name, one sentence, optional link on the right.
 // basic-resume's own `project` has no description slot, so this replaces it.
@@ -98,14 +77,21 @@
   let shown = url.replace("github.com/", "").replace("gitlab.com/", "").replace("jsr.io/", "")
   context {
     if target() == "html" {
+      // The paged version puts the link in its own right-hand column. Keep that
+      // reading order in HTML with a flex row: the text takes the space it
+      // needs, and the link sits at the right until the line is too narrow.
       let link-part = if url == "" {
-        none
+        []
       } else {
-        html.elem("a", attrs: (href: "https://" + url), " " + shown)
+        html.elem(
+          "a",
+          attrs: (class: "proj-link", href: "https://" + url),
+          icon-html(host-icon-path(url)) + " " + shown,
+        )
       }
       html.elem("p", attrs: (class: "proj"),
-        html.elem("strong", name) + " — " + note
-          + if link-part == none { [] } else { link-part },
+        html.elem("span", attrs: (class: "proj-text"), html.elem("strong", name) + " — " + note)
+          + link-part,
       )
     } else {
       block(spacing: 0.72em)[
@@ -120,7 +106,37 @@
       ]
     }
   }
+}// The contact line under the name. basic-resume joins its own contact items with
+// "  |  " and offers no hook to change that, so the resumes pass no contact fields
+// and call this instead. Each item is (icon, label, url); url "" renders as text.
+#let contact(items) = {
+  let parts = items.map(it => {
+    let (icon, label, url) = it
+    let mark = box(image("icons/" + icon + ".svg", height: 0.98em), baseline: 0.18em)
+    let body = if url == "" { label } else { link(url)[#label] }
+    box[#mark#h(0.34em)#body]
+  })
+  context {
+    if target() == "html" {
+      // Typst export inlines each icon as a data URI, so the marks survive. The
+      // horizontal spacing does not, so the row is a flex container in CSS and
+      // each item carries its own icon instead of a separator character.
+      let plain = items.map(it => {
+        let (icon, label, url) = it
+        let mark = icon-html("icons/" + icon + ".svg")
+        let body = if url == "" { label } else { html.elem("a", attrs: (href: url), label) }
+        html.elem("span", attrs: (class: "citem"), mark + " " + body)
+      })
+      html.elem("p", attrs: (class: "contact"), plain.fold(none, (a, b) => if a == none { b } else { a + b }))
+    } else {
+      // Sit close under the name, then leave a clear gap before the summary so the
+      // row reads as part of the heading rather than as the first line of the text.
+      block(above: 0.1em, below: 1.7em, text(size: 0.95em, parts.join(h(1.15em))))
+    }
+  }
 }
+
+
 
 // A label/value skills block. Takes an array of (label, content) pairs.
 #let skills(rows) = {

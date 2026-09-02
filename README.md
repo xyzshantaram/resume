@@ -21,7 +21,7 @@ below always point at the newest build.
 | AI agent and developer tooling engineer | Coding agents, harnesses, MCP, plugin systems. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-AI-Agent-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-AI-Agent-Engineer.pdf) |
 | Rust systems and embedded security engineer | Rust, WebAssembly, embedded C, radio. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Rust-Systems-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Rust-Systems-Engineer.pdf) |
 | Senior full-stack TypeScript engineer | Product work, front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
-| Hardware and mechanical engineer | CAD, fixturing, design for manufacture, PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Mechanical-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Mechanical-Engineer.pdf) |
+| Hardware and electrical engineer | CAD, fixturing, design for manufacture, PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Mechanical-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Mechanical-Engineer.pdf) |
 
 Contact: [me@shantaram.xyz](mailto:me@shantaram.xyz) ·
 [shantaram.xyz](https://shantaram.xyz) ·
