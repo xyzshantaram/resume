@@ -27,15 +27,6 @@ of people or spread happiness in the world.
   (2020 – 2025, CGPA: 7.55).
 - **Army Public School, Chennai** (2020, 455/500)
 
-## Skills
-
-- Proficient in **TypeScript**, **Rust**, **JavaScript**, **HTML5**, and **CSS**
-- Experienced with **Vue.js**, **React**, **Angular**, and front-end ecosystems
-- Proficient with setting up, using, and troubleshooting Linux systems
-- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
-- Experienced in electronics design and designing and shipping consumer
-  electronics products
-
 </div>
 
 <div id=right-pane>
@@ -45,9 +36,15 @@ of people or spread happiness in the world.
 - **Freelance Software Engineer** (**2019 – present**)
   - [**Portfolio**](https://shantaram.xyz/portfolio/)
   - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
-    for decentralized finance platform.
+    for decentralized ownership platform. Worked on migrating the core product
+    from Tailwind to Bulma and modernizing Vue 2 code to Vue 3.
   - **Ready Cloud Consulting** – Developed Angular front-end components for
-    enterprise clients.
+    enterprise client to integrate with the AWS Cognito identity provider
+    service.
+  - **Soapbox Technology** – Built React frontend and Deno (hono) backend
+    features for the Ditto social networking app. Implemented a new captcha
+    system, built out Mastodon API routes, worked on language detection and
+    translations and more.
   - Handled multiple client projects and independent contracts in full-stack
     development.
 - **Founder**, _The Attention Button_ (**Feb 2025 – present**)
@@ -82,6 +79,15 @@ of people or spread happiness in the world.
   [GitHub](https://github.com/xyzshantaram/pseudows)
 - [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
   Rust key-value store with pluggable backends
+
+## Skills
+
+- Proficient in **TypeScript**, **Rust**, **JavaScript**, **HTML5**, and **CSS**
+- Experienced with **Vue.js**, **React**, **Angular**, and front-end ecosystems
+- Proficient with setting up, using, and troubleshooting Linux systems
+- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
+- Experienced in electronics design and designing and shipping consumer
+  electronics products
 
 ---
 
