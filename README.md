@@ -1,94 +1,90 @@
-# Siddharth S Singh
+# Siddharth S Singh — résumés
 
-<div id=wrapper>
-<div id=left-pane>
+**TL;DR** — you probably want the general one:
+[read it in the browser](https://xyzshantaram.github.io/resume/resume.html)
+or [download the PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Resume.pdf).
 
-<div class=small>
+Six résumés, one per kind of role, written in [Typst](https://typst.app) from a
+shared template. Five are one page. The general one is two.
 
-[me@shantaram.xyz](mailto:me@shantaram.xyz)
+Each one builds twice: a PDF to attach to an application, and an HTML page that
+reads well on a phone. The built files are not kept in git. Every push to `main`
+rebuilds them, and a tagged push publishes the PDFs to a release, so the links
+below always point at the newest build.
 
-- <https://shantaram.xyz>
-- [GitHub profile](https://github.com/xyzshantaram)
+## Read or download
 
-**Languages spoken**: English _(fluent)_, Hindi _(native)_, Tamil
-_(conversational)_\
-**Hobbies**: Reading (fiction, mostly), creative writing, listening to music,
-Dungeons and Dragons, filmmaking
+| Résumé | For | Links |
+| --- | --- | --- |
+| **General** | The public one. Two pages. Use it when the role is not yet known. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Resume.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Resume.pdf) |
+| Nostr and Bitcoin protocol engineer | Protocol, signing, and Lightning work. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Nostr-Bitcoin-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Nostr-Bitcoin-Engineer.pdf) |
+| AI agent and developer tooling engineer | Coding agents, harnesses, MCP, plugin systems. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-AI-Agent-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-AI-Agent-Engineer.pdf) |
+| Rust systems and embedded security engineer | Rust, WebAssembly, embedded C, radio. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Rust-Systems-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Rust-Systems-Engineer.pdf) |
+| Senior full-stack TypeScript engineer | Product work, front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
+| Hardware and mechanical engineer | CAD, fixturing, design for manufacture, PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Mechanical-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Mechanical-Engineer.pdf) |
 
-</div>
+Contact: [me@shantaram.xyz](mailto:me@shantaram.xyz) ·
+[shantaram.xyz](https://shantaram.xyz) ·
+[github.com/xyzshantaram](https://github.com/xyzshantaram) ·
+[gitlab.com/xyzshantaram](https://gitlab.com/xyzshantaram)
 
-Freelance software engineer with an interest in web development. I have a
-passion for open-source software, and enjoy making things that improve the lives
-of people or spread happiness in the world.
+## Quickstart
 
-## Education
+```sh
+git clone git@github.com:xyzshantaram/resume.git
+cd resume
+make site                                  # build everything into out/
+python3 -m http.server -d out/site 8000    # then open http://localhost:8000
+```
 
-- **B.Tech Electrical and Electronics Engineering, VIT University, Chennai**
-  (2020 – 2025, CGPA: 7.55).
-- **Army Public School, Chennai** (2020, 455/500)
+You need [Typst](https://github.com/typst/typst) for the PDFs and
+[Deno](https://deno.com) for the HTML index. Typst downloads the `basic-resume`
+package itself on the first run.
 
-</div>
+```sh
+cargo install --locked typst-cli           # or: brew install typst
+curl -fsSL https://deno.land/install.sh | sh
+```
 
-<div id=right-pane>
+## Build targets
 
-## Work Experience
+```sh
+make          # build all six PDFs into out/, under their send-ready names
+make html     # build the HTML pages into out/site/
+make site     # both, plus this README rendered as the index
+make clean
+```
 
-- **Freelance Software Engineer** (**2019 – present**)
-  - [**Portfolio**](https://shantaram.xyz/portfolio/)
-  - **Fractional Finance (later Frabric)** – Built Vue.js/Ethereum integrations
-    for decentralized ownership platform. Worked on migrating the core product
-    from Tailwind to Bulma and modernizing Vue 2 code to Vue 3.
-  - **Ready Cloud Consulting** – Developed Angular front-end components for
-    enterprise client to integrate with the AWS Cognito identity provider
-    service.
-  - **Soapbox Technology** – Built React frontend and Deno (hono) backend
-    features for the Ditto social networking app. Implemented a new captcha
-    system, built out Mastodon API routes, worked on language detection and
-    translations and more.
-  - Handled multiple client projects and independent contracts in full-stack
-    development.
-- **Founder**, _The Attention Button_ (**Feb 2025 – present**)
-  - Conceived, designed, and built an IoT hardware product for long-distance
-    connection from scratch.
-  - Managed CAD design, electronics, firmware, backend, and website.
-  - Shipped devices to consumers with open-source firmware, hardware, design
-    files, and public launch.
-- **Girl Up VIT Chennai**, **Technology Secretary** (**2021 – 2022**)
-  - Built the
-    **[Grant-A-Wish](https://github.com/girlupvitc/grant-a-wish/tree/main/src)**
-    site.
+To work on one resume, let Typst rebuild it on every save and keep a viewer open
+on the result:
 
-</div>
-</div>
+```sh
+typst watch 06-general.typ out/preview.pdf
+```
 
-## Selected Projects
+HTML export in Typst is still marked experimental, so the build prints warnings
+about ignored page and padding rules. Those are expected. `lib/shared.typ`
+re-emits the parts that HTML export would otherwise drop.
 
-- [**Writers Jam**](https://writersjam.shantaram.xyz) - Weekly writing exercises
-  for writers – an anti-social network.
-  [GitHub](https://github.com/xyzshantaram/writers-jam)
-- [**rite-cloud**](https://riteapp.co.in) – Cloud sync service for the
-  [rite text editor](https://github.com/xyzshantaram/rite), written in Rust.
-  [GitHub](https://github.com/xyzshantaram/rite-cloud)
-- [**Campfire**](https://xyzshantaram.github.io/campfire/) – A cozy web
-  framework [GitHub](https://github.com/xyzshantaram/campfire)
-- [**COVID-19 Resources**](https://xyzshantaram.github.io/covid19-resource-site)
-  – Live-updating resource finder using Google Sheets
-  [GitHub](https://github.com/xyzshantaram/covid19-resource-site)
-- [**pseudows**](https://xyzshantaram.github.io/pseudows/) – Fake Windows
-  98-style desktop environment
-  [GitHub](https://github.com/xyzshantaram/pseudows)
-- [**stupid-simple-kv**](https://github.com/xyzshantaram/stupid-simple-kv) –
-  Rust key-value store with pluggable backends
+## Release
 
-## Skills
+A tag publishes a release with all six PDFs attached. Tags are ISO 8601 basic
+with the local UTC offset, for example `20260903T001948+0530`:
 
-- Proficient in **TypeScript**, **Rust**, **JavaScript**, **HTML5**, and **CSS**
-- Experienced with **Vue.js**, **React**, **Angular**, and front-end ecosystems
-- Proficient with setting up, using, and troubleshooting Linux systems
-- Working knowledge of **C**, **Java**, **Svelte**, and **Python**
-- Experienced in electronics design and designing and shipping consumer
-  electronics products
+```sh
+make tag                  # tags the current commit with the time right now
+git push origin --tags
+```
 
----
+The workflow in `.github/workflows/build.yaml` builds on every push to `main`,
+deploys the GitHub Pages copy, and creates the release when the push is a tag.
 
-<!-- @include cyblog-footer.html -->
+## Layout
+
+| Path | What it is |
+| --- | --- |
+| `0*.typ` | One résumé each. Content only. |
+| `lib/shared.typ` | The shared template: spacing, the contact row, links, projects, skills, references, and the HTML branch. |
+| `lib/page.css` | Styling for the HTML pages. |
+| `lib/icons/` | The marks used in the contact row and next to links. |
+| `build-index.ts` | Renders this README into the GitHub Pages index. |

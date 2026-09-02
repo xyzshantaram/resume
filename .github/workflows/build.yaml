@@ -1,44 +1,68 @@
+name: build
+
+# Every push to main rebuilds the PDFs and republishes the GitHub Pages copy, so
+# xyzshantaram.github.io/resume is never stale. A tagged push does the same and
+# also cuts a release, which is what the README links point at.
 on:
   push:
     branches:
       - main
-    paths:
-      - README.md
-      - cyblog-meta
-      - cyblog-footer.html
-      - Makefile
-      - resume.css
+    tags:
+      - "*"
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# One Pages deployment at a time. Queue rather than cancel, so a tag build is
+# never dropped in favour of a later push.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  resume:
-    runs-on: "ubuntu-latest"
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
     steps:
-      - name: "Checkout the repo"
-        uses: actions/checkout@v3
-      - name: "Setup Deno"
-        uses: denoland/setup-deno@v1
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
-      - name: "Install Chromium"
-        uses: browser-actions/setup-chrome@v1
-      - name: "build"
+          deno-version: v2.x
+
+      # Builds the six PDFs and renders README.md into out/site/index.html.
+      - name: Build
+        run: make site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/site
+
+      - name: Deploy to Pages
+        id: pages
+        uses: actions/deploy-pages@v4
+
+      # Only a tag produces a release. The README links to
+      # releases/latest/download/<name>.pdf, so this is what refreshes them.
+      - name: Publish the release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          sudo apt install fonts-inter
-          git clone https://github.com/xyzshantaram/cyblog cyblog-repo
-          cd cyblog-repo
-          make compile
-          cp cyblog ..
-          cd ..
-          rm -rf cyblog-repo
-          export PATH="$PATH:$(pwd)"
-          make dist
-          rm cyblog
-        continue-on-error: false
-      - name: "commit changes"
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Built PDF and HTML page."
-          git push origin main
+          gh release create "$GITHUB_REF_NAME" out/*.pdf \
+            --title "$GITHUB_REF_NAME" \
+            --notes "Built from ${GITHUB_SHA}."

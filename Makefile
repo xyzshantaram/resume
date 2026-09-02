@@ -1,20 +1,44 @@
-PDF = SiddharthSingh_resume.pdf
+# Build every resume with Typst, giving each PDF the name it carries when it is
+# sent to an employer. Nothing here is committed: out/ is ignored, and the PDFs
+# reach people through a GitHub release instead.
 
-default: dist
+TYPST ?= typst
+DENO  ?= deno
+OUT   := out
+
+# Source stem : the name the built PDF carries.
+NAMES := \
+	01-nostr-bitcoin:Siddharth-Singh-Nostr-Bitcoin-Engineer \
+	02-ai-harness:Siddharth-Singh-AI-Agent-Engineer \
+	03-rust-systems:Siddharth-Singh-Rust-Systems-Engineer \
+	04-fullstack-ts:Siddharth-Singh-Fullstack-Engineer \
+	05-hardware-mech:Siddharth-Singh-Mechanical-Engineer \
+	06-general:Siddharth-Singh-Resume
+
+.PHONY: all site clean tag
+
+all:
+	@mkdir -p $(OUT)
+	@for pair in $(NAMES); do \
+		src="$${pair%%:*}"; dst="$${pair##*:}"; \
+		echo "  $$src.typ -> $(OUT)/$$dst.pdf"; \
+		$(TYPST) compile "$$src.typ" "$(OUT)/$$dst.pdf" || exit 1; \
+	done
+
+# What GitHub Pages serves: the README as the index, the general resume beside
+# it so it opens in the browser, and the rest for anyone who wants them.
+site: all
+	@mkdir -p $(OUT)/site
+	$(DENO) run --allow-read --allow-write build-index.ts $(OUT)/site/index.html
+	cp $(OUT)/*.pdf $(OUT)/site/
+	cp $(OUT)/Siddharth-Singh-Resume.pdf $(OUT)/site/resume.pdf
 
 clean:
-	rm -f resume.cyblog
-	rm -f index.html
-	rm -f $(PDF)
+	rm -rf $(OUT)
 
-html: clean
-	cp 'cyblog-meta' 'resume.cyblog'
-	cat 'README.md' >> 'resume.cyblog'
-	cyblog resume.cyblog --force -o index.html
-
-
-dist: html
-	chromium --headless --disable-gpu --no-margins --no-sandbox --print-to-pdf-no-header --no-pdf-header-footer --print-to-pdf="$(PDF)" index.html
-
-preview: dist
-	evince $(PDF)
+# Release tags are ISO 8601 basic with the local UTC offset, e.g.
+# 20260903T001948+0530. Colons are not legal in a git ref, so the basic form is
+# the one that survives.
+tag:
+	@t="$$(date +%Y%m%dT%H%M%S%z)"; \
+	git tag "$$t" && echo "tagged $$t; push it with: git push origin --tags"
