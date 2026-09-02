@@ -52,4 +52,5 @@ clean:
 # the one that survives.
 tag:
 	@t="$$(date +%Y%m%dT%H%M%S%z)"; \
-	git tag "$$t" && echo "tagged $$t; push it with: git push origin --tags"
+	git tag -a "$$t" -m "Resume build $$t" \
+		&& echo "tagged $$t; push it with: git push origin --tags"
