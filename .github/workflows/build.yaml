@@ -23,11 +23,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # One build serves both outputs. A tag and a branch push run the same steps.
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
@@ -52,17 +50,47 @@ jobs:
         with:
           path: out/site
 
+      - name: Keep the PDFs for the release job
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: out/*.pdf
+          retention-days: 1
+
+  # The github-pages environment accepts a deployment only from main, so this
+  # job is skipped on a tag. A tag always points at a commit that main already
+  # published, so the site stays current either way.
+  pages:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - name: Deploy to Pages
-        id: pages
+        id: deploy
         uses: actions/deploy-pages@v4
 
-      # Only a tag produces a release. The README links to
-      # releases/latest/download/<name>.pdf, so this is what refreshes them.
+  # Only a tag produces a release. The README links to
+  # releases/latest/download/<name>.pdf, so this is what refreshes them.
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch the built PDFs
+        uses: actions/download-artifact@v4
+        with:
+          name: pdfs
+          path: out
+
       - name: Publish the release
-        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
           gh release create "$GITHUB_REF_NAME" out/*.pdf \
+            --repo "$REPO" \
             --title "$GITHUB_REF_NAME" \
             --notes "Built from ${GITHUB_SHA}."
