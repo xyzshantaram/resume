@@ -15,23 +15,34 @@ NAMES := \
 	05-hardware-mech:Siddharth-Singh-Mechanical-Engineer \
 	06-general:Siddharth-Singh-Resume
 
-.PHONY: all site clean tag
+.PHONY: all html site clean tag
 
 all:
 	@mkdir -p $(OUT)
 	@for pair in $(NAMES); do \
 		src="$${pair%%:*}"; dst="$${pair##*:}"; \
 		echo "  $$src.typ -> $(OUT)/$$dst.pdf"; \
-		$(TYPST) compile "$$src.typ" "$(OUT)/$$dst.pdf" || exit 1; \
+		$(TYPST) compile --features html "$$src.typ" "$(OUT)/$$dst.pdf" || exit 1; \
+	done
+
+# One readable HTML page per resume, for GitHub Pages. HTML export is incomplete
+# in typst and prints a warning; the warning is expected.
+html:
+	@mkdir -p $(OUT)/site
+	@for pair in $(NAMES); do \
+		src="$${pair%%:*}"; dst="$${pair##*:}"; \
+		echo "  $$src.typ -> $(OUT)/site/$$dst.html"; \
+		$(TYPST) compile --features html --format html "$$src.typ" "$(OUT)/site/$$dst.html" || exit 1; \
 	done
 
 # What GitHub Pages serves: the README as the index, the general resume beside
 # it so it opens in the browser, and the rest for anyone who wants them.
-site: all
+site: all html
 	@mkdir -p $(OUT)/site
 	$(DENO) run --allow-read --allow-write build-index.ts $(OUT)/site/index.html
 	cp $(OUT)/*.pdf $(OUT)/site/
 	cp $(OUT)/Siddharth-Singh-Resume.pdf $(OUT)/site/resume.pdf
+	cp $(OUT)/site/Siddharth-Singh-Resume.html $(OUT)/site/resume.html
 
 clean:
 	rm -rf $(OUT)

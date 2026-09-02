@@ -1,0 +1,182 @@
+/* Styles for the HTML export of each resume. Served by GitHub Pages. */
+
+:root {
+  color-scheme: light dark;
+  --accent: #1a3f66;
+  --rule: #c8d0d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #8fb6dd;
+    --rule: #3a4048;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: canvas;
+  color: canvastext;
+}
+
+/* Typst HTML export writes the document straight into <body> with no wrapper
+   element, so the column lives on <body> itself. */
+body {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Download bar, shown at the top and the bottom of each page. A rule on the
+   side that faces the resume keeps the link from reading as part of it. */
+.dl {
+  margin: 0;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.dl-top {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.25rem;
+}
+
+.dl-bottom {
+  border-top: 1px solid var(--rule);
+  margin-top: 1.75rem;
+}
+
+.dl a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* One job or one degree. The dates sit on the right of the head line. */
+.entry {
+  margin: 1rem 0;
+}
+
+.entry-head,
+.entry-sub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.role {
+  font-weight: 700;
+}
+
+.org,
+.where {
+  font-style: italic;
+}
+
+/* Skills: label on the left, value on the right, stacked when narrow. */
+.skills {
+  margin: 1rem 0;
+}
+
+.skills dt {
+  font-weight: 700;
+}
+
+.skills dd {
+  margin: 0 0 0.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 30rem) {
+  .skills dd {
+    margin-left: 13rem;
+  }
+
+  .skills dt {
+    float: left;
+    clear: left;
+    width: 12rem;
+  }
+}
+
+/* Projects and the contact line. */
+.proj a,
+.contact a {
+  color: var(--accent);
+}
+
+/* Typst emits each contact item as an inline-block with no whitespace between
+   the items, which leaves the line no place to wrap. A flex container gives
+   every item its own wrap opportunity, so the row folds instead of running off
+   the side of a phone screen. */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.55rem;
+  overflow-wrap: anywhere;
+}
+
+.contact .sep {
+  margin: 0;
+}
+
+/* Referees. */
+.refs {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Below 30rem the head of an entry stacks, so the dates fall under the title
+   instead of being squeezed beside it. */
+@media (max-width: 30rem) {
+  body {
+    padding: 1rem 0.9rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .entry-head,
+  .entry-sub {
+    flex-direction: column;
+  }
+
+  .skills dt {
+    float: none;
+    width: auto;
+  }
+
+  .skills dd {
+    margin-left: 1rem;
+  }
+}

@@ -9,7 +9,7 @@
   font-size: 8.4pt,
 )
 
-#show: airy
+#show: airy.with(pdf: "Siddharth-Singh-Fullstack-Engineer.pdf")
 
 #contact((
   ("pin", "Bangalore, India · remote, any time zone", ""),
