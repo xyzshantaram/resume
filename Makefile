@@ -8,12 +8,10 @@ OUT   := out
 
 # Source stem : the name the built PDF carries.
 NAMES := \
-	01-nostr-bitcoin:Siddharth-Singh-Nostr-Bitcoin-Engineer \
-	02-ai-harness:Siddharth-Singh-AI-Agent-Engineer \
-	03-rust-systems:Siddharth-Singh-Rust-Systems-Engineer \
-	04-fullstack-ts:Siddharth-Singh-Fullstack-Engineer \
-	05-hardware-mech:Siddharth-Singh-Mechanical-Engineer \
-	06-general:Siddharth-Singh-Resume
+	01-software-engineer:Siddharth-Singh-Software-Engineer \
+	02-fullstack-ts:Siddharth-Singh-Fullstack-Engineer \
+	03-hardware:Siddharth-Singh-Hardware-Engineer \
+	04-general:Siddharth-Singh-Resume
 
 .PHONY: all html site clean tag
 

@@ -9,7 +9,7 @@
   font-size: 7.8pt,
 )
 
-#show: airy.with(pdf: "Siddharth-Singh-Mechanical-Engineer.pdf")
+#show: airy.with(pdf: "Siddharth-Singh-Hardware-Engineer.pdf")
 
 #contact((
   ("pin", "Bangalore, India", ""),
@@ -20,10 +20,9 @@
 
 Hardware generalist. I have designed and fabricated five PCBs, one of which ships in a product I
 sell. On that product I ran the whole loop: parametric CAD, print-parameter tuning, assembly jigs,
-packaging, and the firmware and backend behind it. My degree is Electrical and Electronics, not
-Mechanical, and my
-machining background is additive rather than CNC. What I bring is the build-measure-iterate loop
-across mechanical, electronics, and software, and the discipline to document and cost it.
+packaging, and the firmware and backend behind it. My machining background is additive rather than
+CNC. What I bring is the build-measure-iterate loop across mechanical, electronics, and software,
+and the discipline to document and cost it.
 
 == Hardware Engineering
 
@@ -35,8 +34,7 @@ across mechanical, electronics, and software, and the discipline to document and
 )
 - *Mechanical design.* Designed the chassis, lid, knob, and internal structure as parametric
   OpenSCAD models, using BOSL, MCAD, and `nutsnbolts` for fillets, rails, and bolt and
-  heat-set-insert geometry. Named constants drive it, so a wall thickness or a rail gap changes
-  in one place and the assembly follows.
+  heat-set-insert geometry. Named constants drive it, so one change propagates to the assembly.
 - *Fixturing.* Designed a dedicated *assembly jig* for seating the rotary encoder repeatably,
   then revised it once the first version proved awkward on the bench. Rails, nubs, and snap
   features were dimensioned around real measured fits, not nominal ones.
@@ -73,16 +71,15 @@ across mechanical, electronics, and software, and the discipline to document and
   dates: "2024",
 )
 - An open, extensible classroom handheld between a calculator and a tablet. I designed the carrier
-  board integrating a Raspberry Pi Zero W, a 3.5-inch Waveshare LCD, a matrix keypad, TP4056
-  charging from an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for
-  each module.
+  board integrating a Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, TP4056 charging from
+  an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for each module.
 - Wrote the keyboard matrix driver in C against the Linux 6.1 kernel on Raspberry Pi OS, plus the
-  launcher, a quiz application, and inter-device communication.
+  launcher, a quiz app, and inter-device communication.
 - Produced the full *BOM and cost analysis*: 3,931 INR per unit against a 3,325 INR budget, 15
   percent over, itemised to the resistor. Built three working units and documented the failure
   modes we had not solved, mainly battery configuration and thermal performance.
 
-== Software, and Why It Matters Here
+== Software
 
 #work(
   title: "Software Engineer (contract)",
@@ -90,10 +87,9 @@ across mechanical, electronics, and software, and the discipline to document and
   location: "Remote",
   dates: "2019 — Present",
 )
-- Autonomous manufacturing is a hardware problem wrapped in a software problem. I write production
-  Rust, C, C++, TypeScript, and Python, and I have shipped a sandboxed runtime, a desktop daemon,
-  and device firmware, so I can build the tooling and the operator interface around a cell rather
-  than wait on someone else for it.
+- I write production Rust, C, C++, TypeScript, and Python. I have shipped a sandboxed runtime, a
+  desktop daemon, and device firmware, so I build the tooling and the operator interface around a
+  machine myself.
 
 == Skills
 

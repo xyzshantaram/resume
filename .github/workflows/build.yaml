@@ -38,7 +38,7 @@ jobs:
         with:
           deno-version: v2.x
 
-      # Builds the six PDFs and renders README.md into out/site/index.html.
+      # Builds every résumé and renders README.md into out/site/index.html.
       - name: Build
         run: make site
 

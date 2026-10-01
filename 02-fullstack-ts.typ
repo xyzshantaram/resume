@@ -19,10 +19,10 @@
   ("globe", "shantaram.xyz", "https://shantaram.xyz"),
 ))
 
-Full-stack engineer, six years of shipping, most of it as an independent contractor. I take a
-product from an empty repository to a running service: front end, API, database, container, and
-deploy. TypeScript is my daily language, I maintain a published web framework, and I have shipped
-client work in React, Vue, Angular, and Next.js.
+Full-stack TypeScript engineer with six years of production work, most of it as an independent
+contractor: React applications, APIs, Postgres, browser tooling, and a Rust/WebAssembly runtime. I
+take a product from an empty repository to a running service, and I maintain a published web
+framework. Client work has shipped in React, Vue, Angular, and Next.js.
 
 == Experience
 
@@ -35,10 +35,11 @@ client work in React, Vue, Angular, and Next.js.
 - Shipped three production web applications end to end: a plugin runtime library in TypeScript and
   Rust, a mobile-first app with a marketplace and a social feed in React, and #link("https://gitlab.com/soapbox-pub/tile-studio")[*tile-studio*], a browser IDE
   with a chat pane, live sandboxed preview, and a publish pipeline.
-- Landed that runtime as a feature inside *Ditto*, a React and TypeScript client with a Capacitor
-  shell: roughly *15k lines* covering the runtime, a plugin marketplace, an install and permissions
-  flow, and a threat model. Earlier I worked deeply on the Mastodon API in #link("https://gitlab.com/soapbox-pub/ditto-v1")[*Ditto v1*], a Hono server.
-- Contributed to #link("https://gitlab.com/soapbox-pub/nostrify")[*Nostrify*], an open-source TypeScript framework other teams build on. I wrote its
+- Built that runtime into *Ditto*, a React and TypeScript client with a Capacitor shell: *117
+  commits* covering the embedding layer, a plugin marketplace, an install and permissions flow, and
+  a threat model, plus the AI chat feature with its provider settings, session hooks, and tool
+  system. Earlier I worked deeply on the Mastodon API in #link("https://gitlab.com/soapbox-pub/ditto-v1")[*Ditto v1*], a Hono server.
+- Contributed to #link("https://gitlab.com/soapbox-pub/nostrify")[*Nostrify*], a core framework in Soapbox's Nostr tooling. I wrote its
   Postgres storage layer: protocol filters compiled to Kysely queries over a `jsonb`-indexed schema,
   with migrations and 1.1k lines of tests. I also migrated the package graph off JSR onto npm and
   made typecheck a required CI stage.
@@ -66,7 +67,7 @@ client work in React, Vue, Angular, and Next.js.
   location: "Bangalore",
   dates: "2023 — Present",
 )
-- Designed, built, and sold an IoT product alone: enclosure CAD, a board I designed and
+- Designed, built, and sold an IoT product solo: enclosure CAD, a board I designed and
   fabricated, firmware, backend service, website, instruction leaflet, and packaging. Shipped to
   real customers with the hardware and firmware open-sourced.
 
@@ -76,9 +77,7 @@ client work in React, Vue, Angular, and Next.js.
 #proj("writers-jam", [A weekly writing exercise and an anti-social network. *361 posts and 102,302 views* to date.], url: "writersjam.shantaram.xyz")
 #proj("etu", [A time-clock and invoicing CLI for freelancers, in Deno and compiled to a single binary. Deno.Kv storage, and invoices render through Liquid and Typst templates fed a JSON context. I have billed my own contract work with it daily since 2024.], url: "github.com/xyzshantaram/etu")
 #proj("ink-editor", [WYSIWYG markdown editor on CodeMirror 6, with vertical and horizontal modes.], url: "github.com/xyzshantaram/ink-editor")
-#proj("macrolight", [A TypeScript rewrite of asvd's microlight: a minimal cross-runtime syntax highlighter.], url: "jsr.io/@xyzshantaram/macrolight")
-#proj("colle", [Pastebin service and client library on Deno.], url: "paste.shantaram.xyz")
-#proj("kysely-kv, kysely-deno-sqlite, xjsr", [Small published packages filling real gaps: a Deno.Kv-compatible adapter over any Kysely backend, a SQLite dialect, and a runner for JSR packages via npx.], url: "gitlab.com/soapbox-pub/kysely-kv")
+#proj("Published packages", [Small libraries filling real gaps: *kysely-kv*, a Deno.Kv-compatible adapter over any Kysely backend, *kysely-deno-sqlite*, a SQLite dialect, *macrolight*, a cross-runtime syntax highlighter, and *xjsr*, a runner for JSR packages via npx.], url: "gitlab.com/soapbox-pub/kysely-kv")
 
 == Skills
 

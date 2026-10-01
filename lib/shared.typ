@@ -162,7 +162,7 @@
   }
 }
 
-// The referee list in HTML form, shared by `refs` and `refs-stacked`.
+// The referee list in HTML form, used by `refs`.
 #let refs-html() = {
   let people = (
     ("Chad Curtis", "Soapbox"),
@@ -194,28 +194,14 @@
       block[
         #grid(
           columns: (auto, auto, auto, 1fr),
-          column-gutter: 12pt,
+          column-gutter: 6pt,
           [*Chad Curtis* — Soapbox],
           [*James Sutton* — Fractional Finance],
           [*Jared Ready* — Ready Cloud Consulting],
-          align(right)[#text(size: 0.9em, style: "italic")[Contact details on request.]],
+          // The note sits in the last column, so it must stay narrow enough not to
+          // wrap at the larger body size the two-page resume uses.
+          align(right)[#text(size: 0.78em, style: "italic")[Contact details on request.]],
         )
-      ]
-    }
-  }
-}
-
-// Two-page layout has the vertical room, so give each referee its own line. The
-// single-row version above exists only to save space on the one-page resumes.
-#let refs-stacked = {
-  context {
-    if target() == "html" { refs-html() } else {
-      block[
-        *Chad Curtis* — Soapbox \
-        *James Sutton* — Fractional Finance \
-        *Jared Ready* — Ready Cloud Consulting
-        #v(2pt)
-        #text(size: 0.92em)[Contact details on request.]
       ]
     }
   }
