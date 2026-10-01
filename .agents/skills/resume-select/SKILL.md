@@ -1,13 +1,14 @@
 ---
 name: resume-select
-description: Pick which of this repository's four résumés to send for a job listing. Use when the user shares a job posting (a link, pasted text, a file, or a screenshot) and asks which résumé fits — "which résumé should I send", "pick a résumé", "select a resume for this job" — or wants a listing classified against the résumé set.
+description: Pick which of this repository's four résumés to send for a job listing, and outline how to tailor that pick to it. Use when the user shares a job posting (a link, pasted text, a file, or a screenshot) and asks which résumé fits — "which résumé should I send", "pick a résumé", "select a resume for this job" — or wants a listing classified against the résumé set.
 argument-hint: "[job-listing url | pasted job text | path to file or screenshot]"
 ---
 
 # Resume Select
 
 Read a job listing, walk a fixed checklist over it, and name the one résumé from this
-repository to send. The output is a choice and the evidence for it — not a rewrite.
+repository to send. The output is the choice, the evidence for it, and a short plan for
+tailoring that choice to the listing — not a rewrite.
 
 ## The four résumés
 
@@ -109,9 +110,25 @@ Reply in this shape and nothing longer:
 - **Why:** a short bullet per checklist item that fired, each with the quoted phrase.
 - **Close call:** the runner-up and the single deciding factor — only when two buckets were
   close; otherwise omit.
+- **Tailor:** what a version aimed at this listing would change, in four short parts:
+  - **Lead with** — the bullets and projects already in the chosen résumé that match the
+    listing's required qualifications, restated in the listing's own vocabulary.
+  - **Pull in** — content that already exists in another résumé in this repo (or elsewhere in
+    the repo) but is missing from the chosen one and that this listing asks for. Name the file
+    it lives in.
+  - **Trim** — the least-relevant material to cut or compress to hold the page budget, for the
+    one-page résumés only.
+  - **Gaps** — requirements the listing states that the résumé set does not evidence. Name them
+    as gaps; never invent experience to fill one.
+
+The Tailor plan is advice, not an edit. Keep it to the four parts and one line each.
 
 ## Worked examples
 
+- "AI Engineer — build coding agents in TypeScript; tool use, MCP, evals, prompt and skill
+  design." → A (items 14–15) as the primary requirement → **Software engineer**. Tailor: lead
+  with thursday, aidos, and the bash guard and graph; pull the `edit-code` content-hash detail
+  from `04-general.typ`; trim the signing and radio bullets.
 - Title "Firmware Engineer — ESP32, FreeRTOS, C; bonus: assist with PCB bring-up." → S (firmware,
   items 9, 13), H only as a bonus (item 1) → **Software engineer**.
 - "Hardware Engineer — design enclosures in SolidWorks, run DFM with the CM, own the PCB
@@ -123,8 +140,11 @@ Reply in this shape and nothing longer:
 
 ## Rules
 
-- Select only. Do not edit résumé content from this skill; if the user wants tailoring for a
-  listing, say so and do it as a separate task.
+- Select and suggest; do not edit. This skill names a résumé and outlines tailoring, but it
+  does not touch the `.typ` files. If the user wants the changes made, that is a separate,
+  explicit task.
+- Tailoring may only reorder, reword, or surface content that already exists in the repository.
+  Report a missing requirement as a gap; never invent experience to fill it.
 - Quote the listing, never invent a signal. If the listing was unreadable, say so and either
   ask for a paste or fall back to `04-general.typ` with that stated as the reason.
 - One recommendation. Mention a runner-up only when the decision was close.
