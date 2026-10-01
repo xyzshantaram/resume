@@ -15,7 +15,7 @@ below always resolve to the newest build.
 | --- | --- | --- |
 | **General** | Two pages. The broadest summary: hardware, systems, product, and tooling. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Resume.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Resume.pdf) |
 | Software engineer | Systems and product engineering across TypeScript, Rust, and WebAssembly, including agent tooling. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Software-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Software-Engineer.pdf) |
-| Senior full-stack TypeScript engineer | Product work, front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
+| Full-stack TypeScript engineer | Product work, front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
 | Hardware and electrical engineer | CAD, fixturing, design for manufacture, PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Hardware-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Hardware-Engineer.pdf) |
 
 Contact: [me@shantaram.xyz](mailto:me@shantaram.xyz) ·
