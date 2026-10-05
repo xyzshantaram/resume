@@ -23,7 +23,8 @@ Software engineer, six years in production, most of it as an independent contrac
 product end to end. I move into an unfamiliar stack quickly and work from research rather than
 assumption, then build the systems and interfaces I can reason about — a Rust and WebAssembly
 sandbox, the protocol runtime around it, a coding-agent harness, and the web apps on top.
-Building with AI is my default toolchain, not a specialty I bolt on.
+What I care about is open-source software that is useful, fast, and correct — worth reaching for,
+and simple enough that someone else can read and change it.
 
 == Experience
 

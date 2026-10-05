@@ -23,8 +23,7 @@ Engineer who takes a concept from nothing to shipped, across an unusually wide s
 and fabricated printed circuit boards, written the firmware on them, specified the protocol they
 speak, built the Rust runtime that enforces it, and shipped the web product on top. I have also
 taken a physical product to paying customers and owned everything that requires, down to the
-instruction leaflet. Six years of software engineering, most of it independent, with the scope and
-ownership of a founding engineer.
+instruction leaflet. Six years of software engineering, most of it independent.
 
 == Experience
 
