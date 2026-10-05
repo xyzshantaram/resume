@@ -109,6 +109,7 @@ Five printed circuit boards, designed and fabricated, schematic capture through 
 
 == Agent and developer tooling
 
+#proj("Thursday", [A work in progress: a coding-agent harness that folds aidos and dotfiles-ai into a single product of their own — aidos contributing the enforcement and evidence model, dotfiles-ai the observability and cheaper-workflow plugins.])
 #proj("aidos", [A coding-agent harness with enforced gates. Tickets cannot leave verification without human evidence, and the harness stamps evidence authorship from the entry point so an agent cannot forge a human sign-off. Human and agent share one board, and every action a person takes on it reaches the agent as structured data.], url: "github.com/xyzshantaram/aidos")
 #proj("tile-studio", [A browser IDE for authoring plugins, built on the nostr-canvas devkit: a chat pane, a live sandboxed preview, and a publish pipeline.], url: "gitlab.com/soapbox-pub/tile-studio")
 #proj("dotfiles-ai", [A set of experiments in agent observability and cheaper workflows, shipped as DeepSeek Harness plugins: a bash guard that rewrites a wrong call, a graph of each command chain and its exit codes, inline actions on tool calls, per-role model fallbacks, a unified subscription view, and more.], url: "github.com/xyzshantaram/dotfiles-ai")

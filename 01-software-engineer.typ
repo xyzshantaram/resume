@@ -72,19 +72,19 @@ Building with AI is my default toolchain, not a specialty I bolt on.
   location: "TypeScript",
   dates: "2026",
 )
-- *aidos*, its ticket kernel, moves verification into the execution model: only a human moves a
+- #link("https://github.com/xyzshantaram/aidos")[*aidos*], its ticket kernel, moves verification into the execution model: only a human moves a
   ticket out of verification, evidence is a first-class row stamped with its author, and gates
   are predicates over evidence. An agent cannot forge a human sign-off or mark its own work done.
 - *Turns model actions into computations wherever it can.* Instant compaction folds session
   history with no model call; a bash guard parses each command and rewrites a wrong call into the
-  right one; a bash graph draws each command chain and its exit codes. *dotfiles-ai*, the plugin
+  right one; a bash graph draws each command chain and its exit codes. #link("https://github.com/xyzshantaram/dotfiles-ai")[*dotfiles-ai*], the plugin
   bundle underneath, adds inline actions on tool calls, per-role model fallbacks, a unified
   subscription view, and more.
 
 == Selected Work
 
 #proj("nostr-canvas", [A sandboxed plugin runtime for third-party mini-apps: one NIP plus 26 proposals, a Rust and WebAssembly core, and three client integrations.], url: "soapbox-pub.gitlab.io/nostr-canvas")
-#proj("thursday", [A ticket kernel with evidence gates, and a plugin bundle for observability and cheaper workflows.], url: "github.com/trythursday/thursday")
+#proj("campfire", [My own reactive web framework: chainable DOM builder, reactive stores, no build step, no virtual DOM. Maintained since 2021 on npm and JSR.], url: "campfire.js.org")
 #proj("luacheck-ts", [A 22k-line Lua static analyzer ported to TypeScript for the browser, Deno, and Node.], url: "jsr.io/@xyzshantaram/luacheck-ts")
 #proj("wizardkit", [Build a step-by-step wizard as a Deno script, served as HTML to a browser or desktop window.], url: "jsr.io/@xyzshantaram/wizardkit")
 
