@@ -24,7 +24,25 @@ and the firmware and backend behind it. My machining background is additive rath
 the build-measure-iterate loop across mechanical, electronics, and software, and I document and cost
 what I build.
 
-== Hardware Engineering
+== Experience
+
+PCB design+fabrication, firmware, and parametric CAD (OpenSCAD) work for various hardware projects.
+
+#work(
+  title: "Software Engineer (contract)",
+  company: "Soapbox · earlier Fractional Finance and Ready Cloud Consulting",
+  location: "Remote",
+  dates: "2019 — Present",
+)
+- I write production Rust, C, C++, TypeScript, and Python. I have shipped a sandboxed runtime, a
+  desktop daemon, and device firmware, so I build the tooling and the operator interface around a
+  machine myself.
+- #link("https://github.com/xyzshantaram/nostr-lora")[*nostr-lora*] — a specification and reference implementation carrying Nostr
+  events over LoRa mesh radio, with a transport over Web Serial and Web Bluetooth.
+- #link("https://github.com/xyzshantaram/hardware-signer")[*Soapbox hardware signer*] — an ESP32-WROVER-E NIP-46 signer with a 2.4-inch
+  ILI9341/ST7789 TFT and a six-button pad with physical confirm and cancel, so each signature is
+  approved on the device. I wrote its firmware too: display bring-up, on-device UI, Wi-Fi
+  provisioning, and a scripting layer.
 
 #work(
   title: "Founder and sole engineer",
@@ -49,32 +67,22 @@ what I build.
   a packaging-layout generator. Sold to customers, with the hardware and design files open.
 
 #work(
-  title: "PCB design",
-  company: "Boards designed, fabricated, and assembled — schematic through layout and BOM, in EasyEDA",
+  title: "Miscellaneous",
+  company: "",
   location: "",
-  dates: "2023 — 2026",
+  dates: "",
 )
 - *cardea* — a Trezor Model 1 recreation moved to USB-C. STM32F205RET6, SSD1306 OLED, two
   buttons, ESD array and a resettable polyfuse on the USB input.
-- #link("https://github.com/xyzshantaram/hardware-signer")[*Soapbox hardware signer*] — an ESP32-WROVER-E NIP-46 signer with a 2.4-inch ILI9341/ST7789 TFT and a
-  six-button pad with physical confirm and cancel, so each signature is approved on the device. I
-  wrote its firmware too: display bring-up, on-device UI, Wi-Fi provisioning, and a scripting layer.
-- #link("https://github.com/theattentionbutton")[*The Attention Button*] — the board inside the product described above.
+- #link("https://shantaram.xyz/misc/rev3_slides_final.pdf")[*pideck*] — a handheld modular computer and my final-year project: a carrier
+  board integrating a Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, TP4056 charging from
+  an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for each module.
+  Wrote the keyboard matrix driver in C against the Linux 6.1 kernel on Raspberry Pi OS, plus the
+  launcher, a quiz app, and inter-device communication. Produced the full *BOM and cost analysis*:
+  3,931 INR per unit against a 3,325 INR budget, itemised to the resistor. Built three working
+  units.
 - *CH340G USB programmer* — the production programmer I built to flash Attention Button units
-  during assembly. Its header mates with one I designed onto the product board. Alongside these,
-  LoRa mesh work over Web Serial and Web Bluetooth.
-
-== Software
-
-#work(
-  title: "Software Engineer (contract)",
-  company: "Soapbox · earlier Fractional Finance and Ready Cloud Consulting",
-  location: "Remote",
-  dates: "2019 — Present",
-)
-- I write production Rust, C, C++, TypeScript, and Python. I have shipped a sandboxed runtime, a
-  desktop daemon, and device firmware, so I build the tooling and the operator interface around a
-  machine myself.
+  during assembly. Its header mates with one I designed onto the product board.
 
 == Skills
 
@@ -96,20 +104,8 @@ what I build.
   consistent: true,
 )
 
-#work(
-  title: "pideck — handheld modular computer",
-  company: "Final-year project, VIT Chennai: Best Capstone project of 2024 in the Electrical and Electronics Engineering department, team of three",
-  location: "",
-  dates: "2024",
-)
-- An open, extensible classroom handheld between a calculator and a tablet. I designed the carrier
-  board integrating a Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, TP4056 charging from
-  an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for each module.
-- Wrote the keyboard matrix driver in C against the Linux 6.1 kernel on Raspberry Pi OS, plus the
-  launcher, a quiz app, and inter-device communication.
-- Produced the full *BOM and cost analysis*: 3,931 INR per unit against a 3,325 INR budget, 15
-  percent over, itemised to the resistor. Built three working units and documented the failure
-  modes we had not solved, mainly battery configuration and thermal performance.
+- *Best Capstone project of 2024* in the Electrical and Electronics Engineering department, VIT
+  Chennai — #link("https://shantaram.xyz/misc/rev3_slides_final.pdf")[pideck], a handheld modular computer.
 
 == References
 

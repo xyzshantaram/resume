@@ -86,7 +86,7 @@ every part of it. Six years of software engineering, most of it independent.
 
 == Hardware
 
-PCB and electronics design: boards designed and fabricated, from schematic capture through layout and BOM.
+PCB design+fabrication, firmware, and parametric CAD (OpenSCAD) work for various hardware projects.
 
 - *#link("https://github.com/xyzshantaram/hardware-signer")[Soapbox hardware signer]* — ESP32-WROVER-E with a 2.4-inch ILI9341/ST7789 TFT and a six-button
   pad with physical confirm and cancel, so each signature is approved on the device. I wrote its
