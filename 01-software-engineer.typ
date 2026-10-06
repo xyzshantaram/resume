@@ -20,11 +20,10 @@
 ))
 
 Software engineer, six years in production, most of it as an independent contractor owning a
-product end to end. I move into an unfamiliar stack quickly and work from research rather than
-assumption, then build the systems and interfaces I can reason about — a Rust and WebAssembly
-sandbox, the protocol runtime around it, a coding-agent harness, and the web apps on top.
-What I care about is open-source software that is useful, fast, and correct — worth reaching for,
-and simple enough that someone else can read and change it.
+product end to end. I pick up unfamiliar stacks quickly and read before I write, then build systems
+I can reason about: a Rust and WebAssembly sandbox, the protocol runtime around it, a coding-agent
+harness, and the web apps on top. What I care about is open-source software that is useful, fast,
+and correct — worth reaching for, and simple enough that someone else can read and change it.
 
 == Experience
 
@@ -34,18 +33,17 @@ and simple enough that someone else can read and change it.
   location: "Remote",
   dates: "Apr 2024 — Present",
 )
-- Owned a plugin runtime that runs third-party mini-apps in a client with no code change: a
+- Built a plugin runtime that runs third-party mini-apps in a client with no code change: a
   *19k-line Rust crate compiled to WebAssembly* behind a TypeScript embedding layer, consumed by
-  three independent clients. I wrote the runtime, the specification, and the Rust core; each
+  three independent clients. I wrote the runtime, the plugin specification, and the Rust core; each
   plugin gets an isolated Lua engine and no DOM access.
 - Moved capability enforcement out of host JavaScript into Rust, so grants are clamped on every
   write and revoking one takes effect inside the running worker. *Implemented one signing
   protocol four ways* to prove it portable: a browser extension, a Rust desktop daemon, an ESP32
   device I designed the board and firmware for, and a transport over LoRa mesh radio.
 - Built the plugin-authoring agent (*tile-studio*, then a reusable devkit in *Ditto*) whose
-  `edit-code` tool addresses lines by *content hash*, so a stale reference fails loudly instead
-  of silently corrupting a file. Contributed to *Nostrify*: migrated its package graph off JSR
-  onto npm and wrote its initial Postgres store.
+  `edit-code` tool addresses lines by *content hash* to keep edits token-efficient. Contributed
+  to *Nostrify*: migrated its package graph off JSR onto npm and wrote its initial Postgres store.
 
 #work(
   title: "Founder and sole engineer",
@@ -84,8 +82,8 @@ and simple enough that someone else can read and change it.
 
 == Selected Work
 
-#proj("nostr-canvas", [A sandboxed plugin runtime for third-party mini-apps: one NIP plus 26 proposals, a Rust and WebAssembly core, and three client integrations.], url: "soapbox-pub.gitlab.io/nostr-canvas")
-#proj("campfire", [My own reactive web framework: chainable DOM builder, reactive stores, no build step, no virtual DOM. Maintained since 2021 on npm and JSR.], url: "campfire.js.org")
+#proj("nostr-canvas", [A sandboxed plugin runtime for third-party mini-apps: one NIP plus 26 proposals, a Rust and WebAssembly core, and three client integrations.], url: "github.com/xyzshantaram/nostr-canvas")
+#proj("campfire", [A reactive web framework: chainable DOM builder, reactive stores, no build step, no virtual DOM. Maintained since 2021 on npm and JSR.], url: "campfire.js.org")
 #proj("luacheck-ts", [A 22k-line Lua static analyzer ported to TypeScript for the browser, Deno, and Node.], url: "jsr.io/@xyzshantaram/luacheck-ts")
 #proj("wizardkit", [Build a step-by-step wizard as a Deno script, served as HTML to a browser or desktop window.], url: "jsr.io/@xyzshantaram/wizardkit")
 

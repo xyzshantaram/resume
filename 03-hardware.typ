@@ -18,11 +18,11 @@
   ("globe", "shantaram.xyz", "https://shantaram.xyz"),
 ))
 
-Hardware generalist. I have designed and fabricated five PCBs, one of which ships in a product I
-sell. On that product I ran the whole loop: parametric CAD, print-parameter tuning, assembly jigs,
-packaging, and the firmware and backend behind it. My machining background is additive rather than
-CNC. What I bring is the build-measure-iterate loop across mechanical, electronics, and software,
-and the discipline to document and cost it.
+Hardware generalist. I have designed and fabricated PCBs, one of which ships in a product I sell. On
+that product I ran the whole loop: parametric CAD, print-parameter tuning, assembly jigs, packaging,
+and the firmware and backend behind it. My machining background is additive rather than CNC. I work
+the build-measure-iterate loop across mechanical, electronics, and software, and I document and cost
+what I build.
 
 == Hardware Engineering
 
@@ -37,7 +37,7 @@ and the discipline to document and cost it.
   heat-set-insert geometry. Named constants drive it, so one change propagates to the assembly.
 - *Fixturing.* Designed a dedicated *assembly jig* for seating the rotary encoder repeatably,
   then revised it once the first version proved awkward on the bench. Rails, nubs, and snap
-  features were dimensioned around real measured fits, not nominal ones.
+  features were dimensioned around fits measured off real parts.
 - *Design for manufacture.* Iterated the chassis across roughly *55 STL revisions* to v12 and a
   pre-production part. Ran print-parameter studies for layer height and surface roughness, then
   produced *batch plates for 1, 2, 5, and 9 parts* with slow-quality profiles for the production
@@ -50,34 +50,19 @@ and the discipline to document and cost it.
 
 #work(
   title: "PCB design",
-  company: "Five boards designed, fabricated, and assembled — schematic through layout and BOM, in EasyEDA",
+  company: "Boards designed, fabricated, and assembled — schematic through layout and BOM, in EasyEDA",
   location: "",
   dates: "2023 — 2026",
 )
 - *cardea* — a Trezor Model 1 recreation moved to USB-C. STM32F205RET6, SSD1306 OLED, two
   buttons, ESD array and a resettable polyfuse on the USB input.
-- #link("https://gitlab.com/soapbox-pub/hardware-signer")[*Soapbox hardware signer*] — an ESP32-WROVER-E NIP-46 signer with a 2.4-inch ILI9341 TFT and a
+- #link("https://github.com/xyzshantaram/hardware-signer")[*Soapbox hardware signer*] — an ESP32-WROVER-E NIP-46 signer with a 2.4-inch ILI9341/ST7789 TFT and a
   six-button pad with physical confirm and cancel, so each signature is approved on the device. I
   wrote its firmware too: display bring-up, on-device UI, Wi-Fi provisioning, and a scripting layer.
-- #link("https://github.com/theattentionbutton")[*The Attention Button*] and #link("https://shantaram.xyz/misc/rev3_slides_final.pdf")[*pideck*] — the boards inside the two products described here.
+- #link("https://github.com/theattentionbutton")[*The Attention Button*] — the board inside the product described above.
 - *CH340G USB programmer* — the production programmer I built to flash Attention Button units
   during assembly. Its header mates with one I designed onto the product board. Alongside these,
   LoRa mesh work over Web Serial and Web Bluetooth.
-
-#work(
-  title: "pideck — handheld modular computer",
-  company: "Final-year project, VIT Chennai, team of three",
-  location: "",
-  dates: "2024",
-)
-- An open, extensible classroom handheld between a calculator and a tablet. I designed the carrier
-  board integrating a Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, TP4056 charging from
-  an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for each module.
-- Wrote the keyboard matrix driver in C against the Linux 6.1 kernel on Raspberry Pi OS, plus the
-  launcher, a quiz app, and inter-device communication.
-- Produced the full *BOM and cost analysis*: 3,931 INR per unit against a 3,325 INR budget, 15
-  percent over, itemised to the resistor. Built three working units and documented the failure
-  modes we had not solved, mainly battery configuration and thermal performance.
 
 == Software
 
@@ -110,6 +95,21 @@ and the discipline to document and cost it.
   degree: "B.Tech, Electrical and Electronics Engineering",
   consistent: true,
 )
+
+#work(
+  title: "pideck — handheld modular computer",
+  company: "Final-year project, VIT Chennai: Best Capstone project of 2024 in the Electrical and Electronics Engineering department, team of three",
+  location: "",
+  dates: "2024",
+)
+- An open, extensible classroom handheld between a calculator and a tablet. I designed the carrier
+  board integrating a Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, TP4056 charging from
+  an 18650, an MT3608 boost stage, and LM386 audio, drawing custom footprints for each module.
+- Wrote the keyboard matrix driver in C against the Linux 6.1 kernel on Raspberry Pi OS, plus the
+  launcher, a quiz app, and inter-device communication.
+- Produced the full *BOM and cost analysis*: 3,931 INR per unit against a 3,325 INR budget, 15
+  percent over, itemised to the resistor. Built three working units and documented the failure
+  modes we had not solved, mainly battery configuration and thermal performance.
 
 == References
 

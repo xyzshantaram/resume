@@ -98,7 +98,7 @@ buckets still tie:
   domain → `04-general.typ`.
 
 The Software engineer résumé is the safe pick for any engineering role that is not clearly
-front-end or hardware; the General one is the pick only when the role genuinely spans domains
+front-end or hardware; the General one is the pick only when the role spans domains
 or cannot be classified.
 
 ## Step 4 — Report
