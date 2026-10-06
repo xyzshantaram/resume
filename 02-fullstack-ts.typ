@@ -42,7 +42,7 @@ framework. Client work has shipped in React, Vue, Angular, and Next.js.
 - Contributed to #link("https://gitlab.com/soapbox-pub/nostrify")[*Nostrify*], a core framework in Soapbox's Nostr tooling. I wrote its
   Postgres storage layer: protocol filters compiled to Kysely queries over a `jsonb`-indexed schema,
   with migrations and 1.1k lines of tests. I also migrated the package graph off JSR onto npm and
-  made typecheck a required CI stage.
+  set up typechecking in CI.
 - Shipped a browser extension with a permission UI and per-site grants, published to the
   #link("https://chromewebstore.google.com/detail/soapbox-signer/nnodjkgakfpkckcnbacpcjbpmlmbihdd")[*Chrome Web Store*] and #link("https://addons.mozilla.org/en-US/firefox/addon/soapbox-pub-signer/")[*Firefox Add-ons*].
 - Ported #link("https://jsr.io/@xyzshantaram/luacheck-ts")[*luacheck-ts*], a 22k-line static analyzer, to TypeScript so it runs in the browser,

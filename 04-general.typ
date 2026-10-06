@@ -59,7 +59,7 @@ instruction leaflet. Six years of software engineering, most of it independent.
 - Contributed to *#link("https://gitlab.com/soapbox-pub/nostrify")[Nostrify]*, a core framework in Soapbox's Nostr tooling. I wrote its initial
   Postgres storage layer: protocol filters compiled to Kysely queries over a `jsonb`-indexed schema, with
   migrations, a benchmark suite, and 1.1k lines of tests. I also migrated the package graph off JSR
-  onto npm so AI coding tools could resolve and build, and made typecheck required in CI.
+  onto npm so AI coding tools could resolve and build, and set up typechecking in CI.
 
 #work(
   title: "Founder and sole engineer",
