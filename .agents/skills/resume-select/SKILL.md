@@ -123,6 +123,20 @@ Reply in this shape and nothing longer:
 
 The Tailor plan is advice, not an edit. Keep it to the four parts and one line each.
 
+## Step 5 — Grill before you edit
+
+Selecting and tailoring is advice, and this skill ends there. If the user then asks for the
+edits to be made, do not carry the Tailor plan straight into the files. Read the `grilling`
+skill and run it first:
+
+- Ask one question at a time with `ask_user_question`, each with real, neutral alternatives
+  and no recommended option, and wait for the answer before asking the next.
+- Never invent a fact, a number, a date, or a piece of experience. Every claim must come from
+  the user or from content already in this repository.
+- Discuss the entire changeset with the user — every file and every changed line — and get an
+  explicit confirmation before editing anything.
+- Do not act until you and the user agree you have reached a shared understanding.
+
 ## Worked examples
 
 - "AI Engineer — build coding agents in TypeScript; tool use, MCP, evals, prompt and skill
@@ -148,3 +162,5 @@ The Tailor plan is advice, not an edit. Keep it to the four parts and one line e
 - Quote the listing, never invent a signal. If the listing was unreadable, say so and either
   ask for a paste or fall back to `04-general.typ` with that stated as the reason.
 - One recommendation. Mention a runner-up only when the decision was close.
+- Before any edit, run the grilling pass in Step 5: one neutral question at a time, no invented
+  details, and the whole changeset discussed and confirmed first.
