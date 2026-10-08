@@ -38,8 +38,8 @@ and correct — worth reaching for, and simple enough that someone else can read
   three independent clients. I wrote the runtime, the plugin specification, and the Rust core; each
   plugin gets an isolated Lua engine and no DOM access.
 - Moved capability enforcement out of host JavaScript into Rust, so grants are clamped on every
-  write and revoking one takes effect inside the running worker. *Implemented one signing
-  protocol four ways* to prove it portable: a browser extension, a Rust desktop daemon, an ESP32
+  write and revoking one takes effect inside the running worker. *Implemented NIP-46 signing
+  four ways* to prove it portable: a browser extension, a Rust desktop daemon, an ESP32
   device I designed the board and firmware for, and a transport over LoRa mesh radio.
 - Built the plugin-authoring agent (*tile-studio*, then a reusable devkit in *Ditto*) whose
   `edit-code` tool addresses lines by *content hash* to keep edits token-efficient. Contributed
@@ -70,16 +70,15 @@ and correct — worth reaching for, and simple enough that someone else can read
 
 #work(
   title: "thursday — an environment that gets more out of a cheap model",
-  company: "Built on DeepSeek Harness · aidos and dotfiles-ai",
-  location: "TypeScript",
+  company: "Built on DeepSeek Harness · aidos and dotfiles-ai · React/TS",
   dates: "2026",
 )
 - #link("https://github.com/xyzshantaram/aidos")[*aidos*], its ticket kernel, moves verification into the execution model: only a human moves a
   ticket out of verification, evidence is a first-class row stamped with its author, and gates
   are predicates over evidence. An agent cannot forge a human sign-off or mark its own work done.
-- *Turns model actions into computations wherever it can.* Instant compaction folds session
-  history with no model call; a bash guard parses each command and rewrites a wrong call into the
-  right one; a bash graph draws each command chain and its exit codes. #link("https://github.com/xyzshantaram/dotfiles-ai")[*dotfiles-ai*], the plugin
+- *Turns model actions into computations wherever it can.* Deterministic context compaction folds
+  session history with no model call; a bash guard parses each command and rewrites a wrong call
+  into the right one; a bash graph draws each command chain and its exit codes. #link("https://github.com/xyzshantaram/dotfiles-ai")[*dotfiles-ai*], the plugin
   bundle underneath, adds inline actions on tool calls, per-role model fallbacks, a unified
   subscription view, and more.
 

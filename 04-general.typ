@@ -34,8 +34,8 @@ every part of it. Four years of software engineering, most of it independent.
 )
 - *#link("https://github.com/xyzshantaram/nostr-canvas")[nostr-canvas]* lets any compatible client run third-party mini-apps with no client-side
   code change. Plugins are sandboxed Lua programs published as Nostr events, and the same plugin
-  renders in three independent clients that share no UI code. I wrote the runtime, the plugin
-  specification, and the Rust core.
+  renders in monorail, tile-studio, and Ditto, three independent clients that share no UI code. I
+  wrote the runtime, the plugin specification, and the Rust core.
 - The core is a *19k-line Rust crate* compiled to WebAssembly through `wasm-bindgen` and `tsify`,
   behind a TypeScript embedding layer and React components (26k lines) that hosts drop into their
   own applications. Every plugin gets an isolated Lua engine and no DOM access, so one plugin

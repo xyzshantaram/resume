@@ -32,7 +32,7 @@ PCB design+fabrication, firmware, and parametric CAD (OpenSCAD) work for various
   title: "Software Engineer (contract)",
   company: "Soapbox · earlier Fractional Finance and Ready Cloud Consulting",
   location: "Remote",
-  dates: "2019 — Present",
+  dates: "Apr 2024 — Present",
 )
 - I write production Rust, C, C++, TypeScript, and Python. I have shipped a sandboxed runtime, a
   desktop daemon, and device firmware, so I build the tooling and the operator interface around a
@@ -66,12 +66,7 @@ PCB design+fabrication, firmware, and parametric CAD (OpenSCAD) work for various
 - *Everything else shipping requires.* Backend, website, an illustrated instruction booklet, and
   a packaging-layout generator. Sold to customers, with the hardware and design files open.
 
-#work(
-  title: "Miscellaneous",
-  company: "",
-  location: "",
-  dates: "",
-)
+*Other hardware.*
 - *cardea* — a Trezor Model 1 recreation moved to USB-C. STM32F205RET6, SSD1306 OLED, two
   buttons, ESD array and a resettable polyfuse on the USB input.
 - #link("https://shantaram.xyz/misc/rev3_slides_final.pdf")[*pideck*] — a handheld modular computer and my final-year project: a carrier

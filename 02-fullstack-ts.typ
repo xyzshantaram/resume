@@ -32,10 +32,11 @@ framework. Client work has shipped in React, Vue, Angular, and Next.js.
   location: "Remote",
   dates: "Apr 2024 — Present",
 )
-- Shipped three production web applications end to end: a plugin runtime library in TypeScript and
-  Rust, a mobile-first app with a marketplace and a social feed in React, and #link("https://github.com/xyzshantaram/tile-studio")[*tile-studio*], a browser IDE
-  for authoring plugins, with a chat pane, a live sandboxed preview, and a publish pipeline.
-- Built that runtime into *Ditto*, a React and TypeScript client with a Capacitor shell: *117
+- Shipped the #link("https://github.com/xyzshantaram/nostr-canvas")[*nostr-canvas*] plugin runtime in TypeScript and Rust, and
+  clients built on it: *monorail*, a mobile-first React app with a marketplace and a social feed,
+  and #link("https://github.com/xyzshantaram/tile-studio")[*tile-studio*], a browser IDE for authoring plugins, with a chat pane, a
+  live sandboxed preview, and a publish pipeline.
+- Built that runtime into *Ditto v2*, a React and TypeScript client with a Capacitor shell: *117
   commits* covering the embedding layer, a plugin marketplace, an install and permissions flow, and
   a threat model, plus the AI chat feature with its provider settings, session hooks, and tool
   system. Earlier I worked deeply on the Mastodon API in #link("https://github.com/xyzshantaram/ditto-v1")[*Ditto v1*], a Hono server.
@@ -48,7 +49,6 @@ framework. Client work has shipped in React, Vue, Angular, and Next.js.
   #link("https://chromewebstore.google.com/detail/soapbox-signer/nnodjkgakfpkckcnbacpcjbpmlmbihdd")[*Chrome Web Store*] and #link("https://addons.mozilla.org/en-US/firefox/addon/soapbox-pub-signer/")[*Firefox Add-ons*].
 - Ported #link("https://jsr.io/@xyzshantaram/luacheck-ts")[*luacheck-ts*], a 22k-line static analyzer, to TypeScript so it runs in the browser,
   Deno, and Node from one codebase.
-- Wrote the product's whole specification: 26 numbered Tile Improvement Proposals (TIPs).
 
 #work(
   title: "Freelance Software Engineer",
