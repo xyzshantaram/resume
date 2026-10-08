@@ -1,0 +1,395 @@
+# The single source of truth for every fact shared across the résumés.
+#
+# Edit a fact here once and every résumé that shows it updates on the next build.
+# The .typ files keep only the per-résumé prose (the summary paragraph, section
+# order, the skills block) and a list of which orgs, bullets, and projects to show.
+#
+# Two conventions:
+#   * Bullets are written in Typst markup. `*bold*`, `#link("...")[...]`, and
+#     backticks all work; lib/facts.typ renders them back to markup.
+#   * A bullet is referenced by its id, so a typo in a résumé is a build error
+#     rather than a missing line.
+#
+# Where the same fact was worded differently in two résumés, the merged entry
+# names the résumés it came from. Where a fact is genuinely shaped for one role
+# (the firmware bullets, `monorail`), it stays its own entry.
+
+person:
+  name: Siddharth S Singh
+  contact:
+    - icon: pin
+      label: Bangalore, India · remote, any time zone
+      url: ""
+    - icon: mail
+      label: me@shantaram.xyz
+      url: mailto:me@shantaram.xyz
+    - icon: github
+      label: xyzshantaram
+      url: https://github.com/xyzshantaram
+    - icon: gitlab
+      label: xyzshantaram
+      url: https://gitlab.com/xyzshantaram
+    - icon: globe
+      label: shantaram.xyz
+      url: https://shantaram.xyz
+
+# "N years in production" is derived from this, never typed, so the count can
+# never disagree with the dates again.
+tenure:
+  production_start: 2022
+
+education:
+  institution: VIT Chennai
+  location: Chennai, India
+  dates: "2020 — 2025"
+  degree: "B.Tech, Electrical and Electronics Engineering"
+
+orgs:
+  soapbox:
+    title: Software Engineer (contract)
+    company: Soapbox
+    location: Remote
+    dates: "Apr 2024 — Present"
+    bullets:
+      # Software-engineer résumé
+      runtime: >
+        Built a plugin runtime that runs third-party mini-apps in a client with no code change: a
+        *19k-line Rust crate compiled to WebAssembly* behind a TypeScript embedding layer, consumed
+        by three independent clients. I wrote the runtime, the plugin specification, and the Rust
+        core; each plugin gets an isolated Lua engine and no DOM access.
+      signing: >
+        Moved capability enforcement out of host JavaScript into Rust, so grants are clamped on
+        every write and revoking one takes effect inside the running worker. *Implemented NIP-46
+        signing four ways* to prove it portable: a browser extension, a Rust desktop daemon, an
+        ESP32 device I designed the board and firmware for, and a transport over LoRa mesh radio.
+      agent-and-nostrify: >
+        Built the plugin-authoring agent (*tile-studio*, then a reusable devkit in *Ditto*) whose
+        `edit-code` tool addresses lines by *content hash* to keep edits token-efficient.
+        Contributed to *Nostrify*: wrote the initial version of its Postgres storage adapter —
+        protocol filters compiled to Kysely queries over postgres.js, with migrations and
+        benchmarks — and worked around a Deno compatibility bug in postgres.js to get it running.
+        Built SQLite- and LMDB-backed event stores, and migrated the Nostrify package graph off JSR
+        onto npm.
+
+      # Full-stack résumé
+      canvases: >
+        Shipped the #link("https://github.com/xyzshantaram/nostr-canvas")[*nostr-canvas*] plugin
+        runtime in TypeScript and Rust, and clients built on it: *monorail*, a mobile-first React
+        app with a marketplace and a social feed, and
+        #link("https://github.com/xyzshantaram/tile-studio")[*tile-studio*], a browser IDE for
+        authoring plugins, with a chat pane, a live sandboxed preview, and a publish pipeline.
+      ditto: >
+        Built that runtime into *Ditto v2*, a React and TypeScript client with a Capacitor shell:
+        *117 commits* covering the embedding layer, a plugin marketplace, an install and permissions
+        flow, and a threat model, plus the AI chat feature with its provider settings, session
+        hooks, and tool system. Earlier I worked deeply on the Mastodon API in
+        #link("https://github.com/xyzshantaram/ditto-v1")[*Ditto v1*], a Hono server.
+      # merged from 02 and 04
+      nostrify: >
+        Contributed to #link("https://github.com/xyzshantaram/nostrify")[*Nostrify*], a core
+        framework in Soapbox's Nostr tooling. I wrote the initial version of its Postgres storage
+        adapter, compiling protocol filters to Kysely queries over postgres.js and setting up its
+        migrations and benchmarks, and worked around a Deno compatibility bug in postgres.js to get
+        it running. I also built SQLite- and LMDB-backed event stores, and migrated the Nostrify
+        package graph off JSR onto npm so AI coding tools could resolve and build, and set up
+        typechecking in CI.
+      extension: >
+        Shipped a browser extension with a permission UI and per-site grants, published to the
+        #link("https://chromewebstore.google.com/detail/soapbox-signer/nnodjkgakfpkckcnbacpcjbpmlmbihdd")[*Chrome Web Store*]
+        and #link("https://addons.mozilla.org/en-US/firefox/addon/soapbox-pub-signer/")[*Firefox Add-ons*].
+      luacheck: >
+        Ported #link("https://jsr.io/@xyzshantaram/luacheck-ts")[*luacheck-ts*], a 22k-line static
+        analyzer, to TypeScript so it runs in the browser, Deno, and Node from one codebase.
+
+      # Hardware résumé
+      stack: >
+        I write production Rust, C, C++, TypeScript, and Python. I have shipped a sandboxed runtime,
+        a desktop daemon, and device firmware, so I build the tooling and the operator interface
+        around a machine myself.
+      lora: >
+        #link("https://github.com/xyzshantaram/nostr-lora")[*nostr-lora*] — a specification and
+        reference implementation carrying Nostr events over LoRa mesh radio, with a transport over
+        Web Serial and Web Bluetooth.
+      signer: >
+        #link("https://github.com/xyzshantaram/hardware-signer")[*Soapbox hardware signer*] — an
+        ESP32-WROVER-E NIP-46 signer with a 2.4-inch ILI9341/ST7789 TFT and a six-button pad with
+        physical confirm and cancel, so each signature is approved on the device. I wrote its
+        firmware too: display bring-up, on-device UI, Wi-Fi provisioning, and a scripting layer.
+
+      # General résumé
+      canvases-general: >
+        *#link("https://github.com/xyzshantaram/nostr-canvas")[nostr-canvas]* lets any compatible
+        client run third-party mini-apps with no client-side code change. Plugins are sandboxed Lua
+        programs published as Nostr events, and the same plugin renders in monorail, tile-studio,
+        and Ditto, three independent clients that share no UI code. I wrote the runtime, the plugin
+        specification, and the Rust core.
+      core: >
+        The core is a *19k-line Rust crate* compiled to WebAssembly through `wasm-bindgen` and
+        `tsify`, behind a TypeScript embedding layer and React components (26k lines) that hosts
+        drop into their own applications. Every plugin gets an isolated Lua engine and no DOM
+        access, so one plugin cannot crash another or reach the host.
+      grants: >
+        *Capability grants* gate fetch, event publishing, encryption, and Bitcoin signing. Rust
+        enforces them, out of reach of the host's JavaScript, so revoking a grant takes effect
+        inside the running worker. The specification carries an explicit dependency graph and three
+        conformance levels.
+      devkit: >
+        Extracted the plugin-authoring agent into a reusable *nostr-canvas devkit* and integrated it
+        into *Ditto*, a separate production client. Its `edit-code` tool addresses lines by *content
+        hash* to keep edits token-efficient.
+      signing-four: >
+        Signing, across four surfaces: a
+        *#link("https://github.com/xyzshantaram/soapbox-signer")[browser extension]* with per-site
+        permissions and PSBT, Taproot, and BIP-375 silent payments;
+        *#link("https://github.com/xyzshantaram/systray-signer")[traystr]*, a Rust desktop daemon
+        keeping the key in the OS keyring;
+        an *#link("https://github.com/xyzshantaram/hardware-signer")[ESP32 hardware signer]* I
+        designed the board and firmware for; and
+        *#link("https://github.com/xyzshantaram/nostr-lora")[NIP-LR]*, a specification and reference
+        implementation carrying events over LoRa mesh radio.
+      mastodon: >
+        Worked deeply on the Mastodon API implementation in
+        *#link("https://github.com/xyzshantaram/ditto-v1")[Ditto v1]*, a Hono server that speaks the
+        Mastodon client API so existing apps work against it unchanged. Ditto v2 is a React and
+        TypeScript single-page application.
+
+  attention-button:
+    # title and company merged from 02's short forms
+    title: Founder and engineer
+    company: The Attention Button — an IoT desk toy, designed and sold
+    location: Bangalore
+    dates: "2023 — 2025"
+    bullets:
+      whole-product: >
+        One person, whole product: parametric CAD, a board I designed and fabricated, firmware, a
+        backend service, the website, and packaging. Sold to paying customers, open-sourced.
+      solo: >
+        Designed, built, and sold an IoT product solo: enclosure CAD, a board I designed and
+        fabricated, firmware, backend service, website, instruction leaflet, and packaging. Shipped
+        to real customers with the hardware and firmware open-sourced.
+      mechanical: >
+        *Mechanical design.* Designed the chassis, lid, knob, and internal structure as parametric
+        OpenSCAD models, using BOSL, MCAD, and `nutsnbolts` for fillets, rails, and bolt and
+        heat-set-insert geometry. Named constants drive it, so one change propagates to the
+        assembly.
+      fixturing: >
+        *Fixturing.* Designed a dedicated *assembly jig* for seating the rotary encoder repeatably,
+        then revised it once the first version proved awkward on the bench. Rails, nubs, and snap
+        features were dimensioned around fits measured off real parts.
+      # merged from 03 and 04
+      dfm: >
+        *Design for manufacture.* Iterated the chassis across roughly *55 STL revisions* to v12 and
+        a pre-production part. Ran print-parameter studies for layer height and surface roughness,
+        then produced *batch plates for 1, 2, 5, and 9 parts* with slow-quality profiles for the
+        production run.
+      electronics: >
+        *Electronics and firmware.* Designed the board in EasyEDA around an ESP-12F, a rotary
+        encoder, and a MAX7219 LED matrix, and wrote the firmware in C++ on PlatformIO and Arduino,
+        with LittleFS storage, a captive-portal Wi-Fi setup flow, and MIDI playback.
+      everything-else: >
+        *Everything else shipping requires.* Backend, website, an illustrated instruction booklet,
+        and a packaging-layout generator. Sold to customers, with the hardware and design files
+        open.
+      whole-product-general: >
+        One person, whole product: parametric OpenSCAD enclosure, a
+        *#link("https://github.com/theattentionbutton")[board I designed and fabricated]*, the
+        ESP8266 firmware, a backend service, the website, an illustrated instruction leaflet, and a
+        packaging-layout generator. Sold to paying customers, with the design files open.
+
+  freelance:
+    title: Freelance Software Engineer
+    company: Fractional Finance · Ready Cloud Consulting · Common Ground Practice
+    location: Remote
+    dates: "2022 — Present"
+    bullets:
+      clients: >
+        *Common Ground Practice*: a Payload CMS and Next.js site on Postgres, sole engineer.
+        *Fractional Finance*: Vue and Ethereum integrations. *Ready Cloud Consulting*: Angular
+        components.
+      # merged from 02 and 04
+      cgp: >
+        *Common Ground Practice*: built and deployed the full content site on Payload CMS and Next.js
+        with Postgres and Docker Compose, including the admin model and the deploy path. Sole
+        engineer.
+      fractional: >
+        *Fractional Finance (later Frabric)*: Vue front end and Ethereum integrations for a
+        decentralised finance platform.
+      ready-cloud: >
+        *Ready Cloud Consulting*: Angular front-end components for enterprise clients.
+
+  # Shown only on 02 and 04.
+  earlier-freelance:
+    title: Earlier freelance work
+    company: Alongside study at VIT Chennai
+    location: ""
+    dates: "2019 — 2022"
+
+  thursday:
+    title: thursday — an environment that gets more out of a cheap model
+    company: Built on DeepSeek Harness · aidos and dotfiles-ai · React/TS
+    location: ""
+    dates: "2026"
+    bullets:
+      aidos: >
+        #link("https://github.com/xyzshantaram/aidos")[*aidos*], its ticket kernel, moves
+        verification into the execution model: only a human moves a ticket out of verification,
+        evidence is a first-class row stamped with its author, and gates are predicates over
+        evidence. An agent cannot forge a human sign-off or mark its own work done.
+      computation: >
+        *Turns model actions into computations wherever it can.* Deterministic context compaction
+        folds session history with no model call; a bash guard parses each command and rewrites a
+        wrong call into the right one; a bash graph draws each command chain and its exit codes.
+        #link("https://github.com/xyzshantaram/dotfiles-ai")[*dotfiles-ai*], the plugin bundle
+        underneath, adds inline actions on tool calls, per-role model fallbacks, a unified
+        subscription view, and more.
+
+# Free-standing bullet runs, shown under a heading rather than a work entry.
+lists:
+  hardware:
+    cardea: >
+      *cardea* — Trezor Model One modified for USB-C and easy hand assembly.
+    pideck: >
+      #link("https://shantaram.xyz/misc/rev3_slides_final.pdf")[*pideck*] — a handheld modular
+      computer and my final-year project: a carrier board integrating a Raspberry Pi Zero W, a
+      3.5-inch LCD, a matrix keypad, TP4056 charging from an 18650, an MT3608 boost stage, and
+      LM386 audio, drawing custom footprints for each module. Wrote the keyboard matrix driver in C
+      against the Linux 6.1 kernel on Raspberry Pi OS, plus the launcher, a quiz app, and
+      inter-device communication. Produced the full *BOM and cost analysis*: 3,931 INR per unit
+      against a 3,325 INR budget, itemised to the resistor. Built three working units.
+    programmer: >
+      *CH340G USB programmer* — the production programmer I built to flash Attention Button units
+      during assembly. Its header mates with one I designed onto the product board.
+    signer-general: >
+      *#link("https://github.com/xyzshantaram/hardware-signer")[Soapbox hardware signer]* —
+      ESP32-WROVER-E with a 2.4-inch ILI9341/ST7789 TFT and a six-button pad with physical confirm
+      and cancel, so each signature is approved on the device. I wrote its firmware as well.
+    attention-board: >
+      *#link("https://github.com/theattentionbutton")[The Attention Button]* — the board inside the
+      product above: ESP-12F, a rotary encoder, a MAX7219 LED matrix, and a buzzer. 0805 passives
+      chosen for hand assembly in small batches.
+
+projects:
+  nostr-canvas:
+    name: nostr-canvas
+    url: github.com/xyzshantaram/nostr-canvas
+    note: >
+      A sandboxed plugin runtime for third-party mini-apps: a specification, a Rust and WebAssembly
+      core, and three client integrations.
+  # merged from 01, 02, and 04
+  campfire:
+    name: campfire
+    url: campfire.js.org
+    note: >
+      A reactive web framework: chainable DOM builder, reactive stores, no build step, no virtual
+      DOM. Maintained since 2021 on npm and JSR, with a docs site.
+  # merged from 01 and 04
+  luacheck-ts:
+    name: luacheck-ts
+    url: jsr.io/@xyzshantaram/luacheck-ts
+    note: >
+      A 22k-line Lua static analyzer ported to TypeScript for the browser, Deno, and Node.
+  # merged from 01 and 04
+  wizardkit:
+    name: wizardkit
+    url: jsr.io/@xyzshantaram/wizardkit
+    note: >
+      Build a step-by-step wizard as a Deno script, served as HTML over HTTP so the same script
+      runs in a browser or a desktop window.
+  # merged from 02 and 04
+  writers-jam:
+    name: writers-jam
+    url: writersjam.shantaram.xyz
+    note: >
+      A weekly writing exercise and anti-social network. Deno service, running in production: *361
+      posts and 102,302 views* to date.
+  # merged from 02 and 04
+  etu:
+    name: etu
+    url: github.com/xyzshantaram/etu
+    note: >
+      Time-clock CLI for freelancers, in Deno and compiled to a single binary. KV storage, and
+      invoicing through Liquid/Typst templates fed a JSON context. I have billed my own contract
+      work with it daily since 2024.
+  ink-editor:
+    name: ink-editor
+    url: github.com/xyzshantaram/ink-editor
+    note: >
+      WYSIWYG markdown editor on CodeMirror 6, with vertical and horizontal modes.
+  macrolight:
+    name: macrolight
+    url: github.com/xyzshantaram/macrolight
+    note: >
+      A tiny cross-runtime syntax highlighter, a TypeScript rewrite of asvd's microlight.
+  aidos:
+    name: aidos
+    url: github.com/xyzshantaram/aidos
+    note: >
+      A coding-agent harness with enforced gates. Tickets cannot leave verification without human
+      evidence, and the harness stamps evidence authorship from the entry point so an agent cannot
+      forge a human sign-off. Human and agent share one board, and every action a person takes on
+      it reaches the agent as structured data.
+  tile-studio:
+    name: tile-studio
+    url: github.com/xyzshantaram/tile-studio
+    note: >
+      A browser IDE for authoring plugins, built on the nostr-canvas devkit: a chat pane, a live
+      sandboxed preview, and a publish pipeline.
+  dotfiles-ai:
+    name: dotfiles-ai
+    url: github.com/xyzshantaram/dotfiles-ai
+    note: >
+      A set of experiments in agent observability and cheaper workflows, shipped as DeepSeek
+      Harness plugins: a bash guard that rewrites a wrong call, a graph of each command chain and
+      its exit codes, inline actions on tool calls, per-role model fallbacks, a unified
+      subscription view, and more.
+  thursday:
+    name: Thursday
+    url: ""
+    note: >
+      A work in progress: a coding-agent harness that folds aidos and dotfiles-ai into a single
+      product of their own — aidos contributing the enforcement and evidence model, dotfiles-ai the
+      observability and cheaper-workflow plugins.
+  omnilua:
+    name: omnilua
+    url: github.com/ianm199/omnilua/issues/249
+    note: >
+      Found and fixed a garbage-collector memory leak in a pure-Rust Lua interpreter: allocations
+      made with no active heap guard were linked onto no owner list, so nothing ever freed them.
+      Roughly 29KB lost per VM. Fix merged upstream.
+  stupid-simple-kv:
+    name: stupid-simple-kv
+    url: github.com/xyzshantaram/stupid-simple-kv
+    note: >
+      Key-value crate with order-preserving binary tuple keys, pluggable memory and SQLite
+      backends, and generic serde values.
+  orange-ticket:
+    name: orange-ticket
+    url: github.com/xyzshantaram/orange-ticket
+    note: >
+      Physical Bitcoin vouchers where no single party knows the key at issuance.
+  dsh-compaction-instant:
+    name: dsh-compaction-instant
+    url: github.com/xyzshantaram/dsh-compaction-instant
+    note: >
+      Deterministic context compaction for coding agents: it compresses history in milliseconds
+      with no model call and keeps the original tokens, never replacing them with a summary. I
+      fixed checkpoints consuming each other and added per-tool retention.
+  pideck:
+    name: pideck
+    url: shantaram.xyz/misc/rev3_slides_final.pdf
+    label: slides
+    note: >
+      Best Capstone project of 2024 in the Electrical and Electronics Engineering department at VIT
+      Chennai. A handheld modular computer, my final-year project: a carrier board integrating a
+      Raspberry Pi Zero W, a 3.5-inch LCD, a matrix keypad, and boost and audio stages, with custom
+      footprints for each module. I wrote the keyboard matrix driver in C against Linux 6.1, plus
+      the #link("https://github.com/xyzshantaram/pideck-launcher")[launcher]. Full BOM and cost
+      analysis, itemised to the resistor. Three working units.
+
+talks:
+  hackable:
+    name: '"Hackable By Default"'
+    url: youtu.be/PO1lggcj-Ic
+    note: >
+      Talk at bitcoin++ Nairobi, 2026, on software that empowers users to extend it themselves, by
+      building systems easy for both people and computers to understand.

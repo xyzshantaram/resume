@@ -70,11 +70,12 @@
 
 // One compact project line: bold name, one sentence, optional link on the right.
 // basic-resume's own `project` has no description slot, so this replaces it.
-#let proj(name, note, url: "") = {
+// `label` overrides the right-hand link text, for URLs too long to fit the row.
+#let proj(name, note, url: "", label: "") = {
   // Show a short label but keep the full link target. A bare "github.com/" or
   // "gitlab.com/" prefix eats width from the description column and wraps the
   // line, so the host becomes an icon instead.
-  let shown = url.replace("github.com/", "").replace("gitlab.com/", "").replace("jsr.io/", "")
+  let shown = if label != "" { label } else { url.replace("github.com/", "").replace("gitlab.com/", "").replace("jsr.io/", "") }
   context {
     if target() == "html" {
       // The paged version puts the link in its own right-hand column. Keep that
