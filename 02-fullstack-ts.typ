@@ -19,7 +19,7 @@
   ("globe", "shantaram.xyz", "https://shantaram.xyz"),
 ))
 
-Full-stack TypeScript engineer with six years of production work, most of it as an independent
+Full-stack TypeScript engineer with four years of production work, most of it as an independent
 contractor: React applications, APIs, Postgres, browser tooling, and a Rust/WebAssembly runtime. I
 take a product from an empty repository to a running service, and I maintain a published web
 framework. Client work has shipped in React, Vue, Angular, and Next.js.
@@ -39,10 +39,11 @@ framework. Client work has shipped in React, Vue, Angular, and Next.js.
   commits* covering the embedding layer, a plugin marketplace, an install and permissions flow, and
   a threat model, plus the AI chat feature with its provider settings, session hooks, and tool
   system. Earlier I worked deeply on the Mastodon API in #link("https://github.com/xyzshantaram/ditto-v1")[*Ditto v1*], a Hono server.
-- Contributed to #link("https://github.com/xyzshantaram/nostrify")[*Nostrify*], a core framework in Soapbox's Nostr tooling. I wrote its
-  Postgres storage layer: protocol filters compiled to Kysely queries over a `jsonb`-indexed schema,
-  with migrations and 1.1k lines of tests. I also migrated the package graph off JSR onto npm and
-  set up typechecking in CI.
+- Contributed to #link("https://github.com/xyzshantaram/nostrify")[*Nostrify*], a core framework in Soapbox's Nostr tooling. I wrote the
+  initial version of its Postgres storage adapter, compiling protocol filters to Kysely queries over
+  postgres.js and setting up its migrations and benchmarks, and worked around a Deno compatibility
+  bug in postgres.js to get it running. I also built SQLite- and LMDB-backed event stores, and
+  migrated the Nostrify package graph off JSR onto npm and set up typechecking in CI.
 - Shipped a browser extension with a permission UI and per-site grants, published to the
   #link("https://chromewebstore.google.com/detail/soapbox-signer/nnodjkgakfpkckcnbacpcjbpmlmbihdd")[*Chrome Web Store*] and #link("https://addons.mozilla.org/en-US/firefox/addon/soapbox-pub-signer/")[*Firefox Add-ons*].
 - Ported #link("https://jsr.io/@xyzshantaram/luacheck-ts")[*luacheck-ts*], a 22k-line static analyzer, to TypeScript so it runs in the browser,

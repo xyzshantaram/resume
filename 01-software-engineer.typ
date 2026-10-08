@@ -19,7 +19,7 @@
   ("globe", "shantaram.xyz", "https://shantaram.xyz"),
 ))
 
-Software engineer, six years in production, most of it as an independent contractor owning a
+Software engineer, four years in production, most of it as an independent contractor owning a
 product end to end. I pick up unfamiliar stacks quickly and read before I write, then build systems
 I can reason about: a Rust and WebAssembly sandbox, the protocol runtime around it, a coding-agent
 harness, and the web apps on top. What I care about is open-source software that is useful, fast,
@@ -43,7 +43,10 @@ and correct — worth reaching for, and simple enough that someone else can read
   device I designed the board and firmware for, and a transport over LoRa mesh radio.
 - Built the plugin-authoring agent (*tile-studio*, then a reusable devkit in *Ditto*) whose
   `edit-code` tool addresses lines by *content hash* to keep edits token-efficient. Contributed
-  to *Nostrify*: migrated its package graph off JSR onto npm and wrote its initial Postgres store.
+  to *Nostrify*: wrote the initial version of its Postgres storage adapter — protocol filters
+  compiled to Kysely queries over postgres.js, with migrations and benchmarks — and worked around
+  a Deno compatibility bug in postgres.js to get it running. Built SQLite- and LMDB-backed event
+  stores, and migrated the Nostrify package graph off JSR onto npm.
 
 #work(
   title: "Founder and sole engineer",
@@ -61,7 +64,7 @@ and correct — worth reaching for, and simple enough that someone else can read
   dates: "2019 — Present",
 )
 - *Common Ground Practice*: a Payload CMS and Next.js site on Postgres, sole engineer.
-  *Fractional Finance*: Vue and Ethereum integrations. *Ready Cloud*: Angular components.
+  *Fractional Finance*: Vue and Ethereum integrations. *Ready Cloud Consulting*: Angular components.
 
 == Agent and Tooling Work
 

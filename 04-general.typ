@@ -22,7 +22,7 @@
 Engineer who works across hardware and software. I design and fabricate printed circuit boards, write
 the firmware that runs on them, and specify the protocols they speak. I built the Rust runtime behind
 them and the web product it powers. I have also taken a physical product to paying customers and built
-every part of it. Six years of software engineering, most of it independent.
+every part of it. Four years of software engineering, most of it independent.
 
 == Experience
 
@@ -54,10 +54,12 @@ every part of it. Six years of software engineering, most of it independent.
 - Worked deeply on the Mastodon API implementation in *#link("https://github.com/xyzshantaram/ditto-v1")[Ditto v1]*, a Hono server that speaks the
   Mastodon client API so existing apps work against it unchanged. Ditto v2 is a React and TypeScript
   single-page application.
-- Contributed to *#link("https://github.com/xyzshantaram/nostrify")[Nostrify]*, a core framework in Soapbox's Nostr tooling. I wrote its initial
-  Postgres storage layer: protocol filters compiled to Kysely queries over a `jsonb`-indexed schema, with
-  migrations, a benchmark suite, and 1.1k lines of tests. I also migrated the package graph off JSR
-  onto npm so AI coding tools could resolve and build, and set up typechecking in CI.
+- Contributed to *#link("https://github.com/xyzshantaram/nostrify")[Nostrify]*, a core framework in Soapbox's Nostr tooling. I wrote the initial
+  version of its Postgres storage adapter, compiling protocol filters to Kysely queries over
+  postgres.js and setting up its migrations and benchmarks, and worked around a Deno compatibility
+  bug in postgres.js to get it running. I also built SQLite- and LMDB-backed event stores, and
+  migrated the Nostrify package graph off JSR onto npm so AI coding tools could resolve and build,
+  and set up typechecking in CI.
 
 #work(
   title: "Founder and sole engineer",
