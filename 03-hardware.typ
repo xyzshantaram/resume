@@ -24,9 +24,9 @@ I build.
 
 PCB design and fabrication, firmware, and parametric CAD (OpenSCAD) work for hardware projects.
 
-#job("soapbox", bullets: ("stack", "lora", "signer"))
-
 #job("attention-button", bullets: ("mechanical", "fixturing", "dfm", "electronics", "everything-else"))
+
+#job("soapbox", bullets: ("stack", "lora", "signer"))
 
 *Other hardware.*
 

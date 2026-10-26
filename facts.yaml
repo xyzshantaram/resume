@@ -114,7 +114,7 @@ orgs:
       product: >
         Designed, built and sold an *open-source, multiplayer* IoT desk toy on my own:
         enclosure CAD, a board I designed and fabricated, firmware, backend, website,
-        instruction leaflet and packaging.
+        instruction leaflet and packaging. Sold 8 units.
       mechanical: >
         Chassis, lid, knob and internal structure as parametric OpenSCAD models, with
         fillets, rails and heat-set inserts driven by named constants.
@@ -155,7 +155,7 @@ orgs:
 
   earlier-freelance:
     title: Earlier freelance work
-    company: Alongside study at VIT Chennai
+    company: Small-business static sites built alongside study at VIT Chennai
     location: ""
     dates: "2019 — 2022"
 
