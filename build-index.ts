@@ -1,20 +1,16 @@
 // Render README.md into the page GitHub Pages serves. The README is the single
 // source for the index, so the repository front page and the site never drift.
 //
-// Usage: deno run --allow-read --allow-write build-index.ts out/site/index.html
-import { marked } from "npm:marked@15";
+// Usage: bun run build-index.ts out/site/index.html
 
-const out = Deno.args[0];
+const out = Bun.argv[2];
 if (!out) {
   console.error("usage: build-index.ts <output.html>");
-  Deno.exit(2);
+  process.exit(2);
 }
 
-const readme = await Deno.readTextFile(
-  new URL("README.md", import.meta.url).pathname,
-);
-
-const body = await marked.parse(readme);
+const readme = await Bun.file(new URL("README.md", import.meta.url)).text();
+const body = Bun.markdown.html(readme);
 
 const CSS = `
 :root { color-scheme: light dark; --accent: #1a3f66; --rule: #d8dde3; }
@@ -56,5 +52,5 @@ const html = `<!doctype html>
 ${body}
 `;
 
-await Deno.writeTextFile(out, html);
+await Bun.write(out, html);
 console.log(`wrote ${out}`);

@@ -17,14 +17,14 @@ tailoring that choice to the listing — not a rewrite.
 | `01-software-engineer.typ` | Software engineer | Systems and product engineering across TypeScript, Rust, and WebAssembly, including AI and agent tooling. One page. |
 | `02-fullstack-ts.typ` | Full-stack TypeScript engineer | Product work, front end through deploy. One page. |
 | `03-hardware.typ` | Hardware and electrical engineer | CAD, fixturing, design for manufacture, PCBs, embedded hardware. One page. |
-| `04-general.typ` | General | The broadest, two pages. The fallback when the role is unclear or spans domains. |
+| `04-general.typ` | Curriculum Vitae | The broadest, two pages. For roles that span domains or do not name one. |
 
 Each builds to a PDF named for the role. The links to hand over:
 
 - Software engineer — read `https://xyzshantaram.github.io/resume/Siddharth-Singh-Software-Engineer.html` · PDF `https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Software-Engineer.pdf`
 - Full-stack — read `…/Siddharth-Singh-Fullstack-Engineer.html` · PDF `…/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf`
 - Hardware — read `…/Siddharth-Singh-Hardware-Engineer.html` · PDF `…/releases/latest/download/Siddharth-Singh-Hardware-Engineer.pdf`
-- General — read `…/Siddharth-Singh-Resume.html` · PDF `…/releases/latest/download/Siddharth-Singh-Resume.pdf`
+- Curriculum Vitae — read `…/Siddharth-Singh-Resume.html` · PDF `…/releases/latest/download/Siddharth-Singh-Resume.pdf`
 
 ## Step 1 — Get the listing
 
@@ -98,7 +98,7 @@ buckets still tie:
   domain → `04-general.typ`.
 
 The Software engineer résumé is the safe pick for any engineering role that is not clearly
-front-end or hardware; the General one is the pick only when the role spans domains
+front-end or hardware; the Curriculum Vitae is the pick only when the role spans domains
 or cannot be classified.
 
 ## Step 4 — Report
@@ -150,7 +150,7 @@ skill and run it first:
 - "Full-stack Engineer — React, TypeScript, Postgres, ship customer-facing features." → F
   (items 5–8, title item 7) → **Full-stack**.
 - "Software Engineer, new grad, generalist — work across the stack." → G (items 17–18) →
-  **General**.
+  **Curriculum Vitae**.
 
 ## Rules
 
@@ -160,7 +160,7 @@ skill and run it first:
 - Tailoring may only reorder, reword, or surface content that already exists in the repository.
   Report a missing requirement as a gap; never invent experience to fill it.
 - Quote the listing, never invent a signal. If the listing was unreadable, say so and either
-  ask for a paste or fall back to `04-general.typ` with that stated as the reason.
+  ask for a paste or use `04-general.typ` with that stated as the reason.
 - One recommendation. Mention a runner-up only when the decision was close.
 - Before any edit, run the grilling pass in Step 5: one neutral question at a time, no invented
   details, and the whole changeset discussed and confirmed first.

@@ -1,8 +1,8 @@
 # Siddharth S Singh — résumés
 
-This repository holds four résumés, one per kind of role, written in
-[Typst](https://typst.app) from a shared template. The general one is the
-broadest; the others are tailored to a specific role.
+This repository holds four résumés, one for each kind of role, written in
+[Typst](https://typst.app) from a shared template. The curriculum vitae covers the
+full range; the others are written for a specific role.
 
 Each build produces a PDF to attach to an application and an HTML page that
 reads well on a phone. Built files are not kept in git: every push to `main`
@@ -13,15 +13,14 @@ below always resolve to the newest build.
 
 | Résumé | For | Links |
 | --- | --- | --- |
-| **General** | Two pages. The broadest summary: hardware, systems, product, and tooling. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Resume.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Resume.pdf) |
-| Software engineer | Systems and product engineering across TypeScript, Rust, and WebAssembly, including agent tooling. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Software-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Software-Engineer.pdf) |
-| Full-stack TypeScript engineer | Product work, front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
-| Hardware and electrical engineer | CAD, fixturing, design for manufacture, PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Hardware-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Hardware-Engineer.pdf) |
+| **Curriculum Vitae** | Two pages. Hardware, systems, product and tooling: the full range of my work. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Resume.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Resume.pdf) |
+| Software engineer | Systems and product engineering across TypeScript, Rust and WebAssembly, including agent tooling. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Software-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Software-Engineer.pdf) |
+| Full-stack TypeScript engineer | Product work from front end through deploy. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Fullstack-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Fullstack-Engineer.pdf) |
+| Hardware and electrical engineer | CAD, fixturing, design for manufacture and PCBs. | [read](https://xyzshantaram.github.io/resume/Siddharth-Singh-Hardware-Engineer.html) · [PDF](https://github.com/xyzshantaram/resume/releases/latest/download/Siddharth-Singh-Hardware-Engineer.pdf) |
 
 Contact: [me@shantaram.xyz](mailto:me@shantaram.xyz) ·
 [shantaram.xyz](https://shantaram.xyz) ·
-[github.com/xyzshantaram](https://github.com/xyzshantaram) ·
-[gitlab.com/xyzshantaram](https://gitlab.com/xyzshantaram)
+[github.com/xyzshantaram](https://github.com/xyzshantaram)
 
 ## Quickstart
 
@@ -32,12 +31,12 @@ make site                                  # build everything into out/
 python3 -m http.server -d out/site 8000    # then open http://localhost:8000
 ```
 
-Typst builds the PDFs and Deno renders the HTML index. Typst downloads the
+Typst builds the PDFs and Bun renders the HTML index. Typst downloads the
 `basic-resume` package itself on the first run.
 
 ```sh
 cargo install --locked typst-cli           # or: brew install typst
-curl -fsSL https://deno.land/install.sh | sh
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ## Build targets

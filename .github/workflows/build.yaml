@@ -33,10 +33,10 @@ jobs:
       - name: Install Typst
         uses: typst-community/setup-typst@v4
 
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          deno-version: v2.x
+          bun-version: latest
 
       # Builds every résumé and renders README.md into out/site/index.html.
       - name: Build

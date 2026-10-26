@@ -71,7 +71,7 @@
 // One compact project line: bold name, one sentence, optional link on the right.
 // basic-resume's own `project` has no description slot, so this replaces it.
 // `label` overrides the right-hand link text, for URLs too long to fit the row.
-#let proj(name, note, url: "", label: "") = {
+#let proj(name, note, url: "", label: "", bullets: ()) = {
   // Show a short label but keep the full link target. A bare "github.com/" or
   // "gitlab.com/" prefix eats width from the description column and wraps the
   // line, so the host becomes an icon instead.
@@ -90,20 +90,41 @@
           icon-html(host-icon-path(url)) + " " + shown,
         )
       }
-      html.elem("p", attrs: (class: "proj"),
-        html.elem("span", attrs: (class: "proj-text"), html.elem("strong", name) + " — " + note)
-          + link-part,
-      )
-    } else {
-      block(spacing: 0.72em)[
-        #grid(
-          columns: (1fr, auto),
-          column-gutter: 8pt,
-          [*#name* — #note],
-          if url != "" {
-            text(size: 0.9em)[#host-icon(url)#link("https://" + url)[#shown]]
-          } else { [] },
+      let body = html.elem("span", attrs: (class: "proj-text"), html.elem("strong", name))
+      if url != "" {
+        body += " · " + link-part + " · " + note
+      } else {
+        body += " — " + note
+      }
+      let head = html.elem("p", attrs: (class: "proj"), body)
+      let detail = if bullets.len() > 0 {
+        let items = bullets.map(b => html.elem("li", b))
+        html.elem(
+          "ul",
+          attrs: (class: "proj-detail"),
+          items.fold(none, (a, b) => if a == none { b } else { a + b }),
         )
+      } else {
+        []
+      }
+      head + detail
+    } else {
+      block(spacing: 0.6em)[
+        #{
+          let body = [*#name*]
+          if url != "" {
+            body += [ · #box(text(size: 0.9em)[#host-icon(url)#link("https://" + url)[#shown]]) · #note]
+          } else {
+            body += [ — #note]
+          }
+          body
+        }
+        #if bullets.len() > 0 {
+          set list(spacing: 0.78em, indent: 0.8em)
+          for b in bullets {
+            list.item(b)
+          }
+        }
       ]
     }
   }
@@ -170,20 +191,15 @@
     ("James Sutton", "Fractional Finance"),
     ("Jared Ready", "Ready Cloud Consulting"),
   )
-  let items = people.map(pair => {
+  let parts = people.map(pair => {
     let (name, org) = pair
-    html.elem("li", html.elem("strong", name) + " — " + org)
+    html.elem("span", attrs: (class: "ref"), html.elem("strong", name) + " — " + org)
   })
-  // Join the two elements into one piece of content. Returning an array here
-  // would put an array in content position, and Typst renders that as its debug
-  // repr instead of as markup.
-  let list = html.elem(
-    "ul",
-    attrs: (class: "refs"),
-    items.fold(none, (a, b) => if a == none { b } else { a + b }),
-  )
-  let note = html.elem("p", attrs: (class: "note"), "Contact details on request.")
-  list + note
+  // Join the parts into one piece of content. Returning an array here would put
+  // an array in content position, and Typst renders that as its debug repr.
+  let line = parts.fold(none, (a, b) => if a == none { b } else { a + " · " + b })
+  let note = html.elem("span", attrs: (class: "note"), "Contact details on request.")
+  html.elem("p", attrs: (class: "refs"), line + " · " + note)
 }
 
 // The three named referees, side by side in one row so the block stays two lines

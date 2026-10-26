@@ -3,7 +3,7 @@
 # reach people through a GitHub release instead.
 
 TYPST ?= typst
-DENO  ?= deno
+BUN   ?= bun
 OUT   := out
 
 # Source stem : the name the built PDF carries.
@@ -37,7 +37,7 @@ html:
 # it so it opens in the browser, and the rest for anyone who wants them.
 site: all html
 	@mkdir -p $(OUT)/site
-	$(DENO) run --allow-read --allow-write build-index.ts $(OUT)/site/index.html
+	$(BUN) run build-index.ts $(OUT)/site/index.html
 	cp $(OUT)/*.pdf $(OUT)/site/
 	cp $(OUT)/Siddharth-Singh-Resume.pdf $(OUT)/site/resume.pdf
 	cp $(OUT)/site/Siddharth-Singh-Resume.html $(OUT)/site/resume.html

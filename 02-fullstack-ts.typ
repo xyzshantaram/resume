@@ -14,39 +14,41 @@
 
 #contact(contact-items)
 
-Full-stack TypeScript engineer with #years-in-production() years of production work, most of it as an
-independent contractor: React applications, APIs, Postgres, browser tooling, and a Rust/WebAssembly
-runtime. I take a product from an empty repository to a running service, and I maintain a published
-web framework. Client work has shipped in React, Vue, Angular, and Next.js.
+Full-stack TypeScript engineer with #years-in-production() years of production work, mostly
+independent: React, APIs, Postgres, browser tooling and a Rust/WebAssembly runtime. I take a
+product from an empty repository to a running service, and I maintain a published web framework.
+Client work has shipped in React, Vue, Angular and Next.js.
 
 == Experience
 
-#job("soapbox", bullets: ("canvases", "ditto", "nostrify", "extension", "luacheck"))
+#job("soapbox", bullets: ("canvases", "ditto", "nostrify", "captcha", "luacheck"))
 
-#job("freelance", bullets: ("cgp", "fractional", "ready-cloud"))
+#job("freelance", bullets: ("clients",))
 
-#job("attention-button", bullets: ("solo",))
+#job("attention-button", bullets: ("product",))
 
-#job("earlier-freelance")
+== AI systems
+
+#fact-proj("thursday", detail: false)
+#fact-proj("thursday-dsh", detail: false)
+#fact-proj("ai-for-all", detail: false)
 
 == Selected Projects
 
+#fact-proj("homepage")
 #fact-proj("campfire")
 #fact-proj("writers-jam")
 #fact-proj("etu")
-#fact-proj("ink-editor")
 #fact-proj("macrolight")
 
 == Skills
 
 #skills((
   ("Languages", [TypeScript, JavaScript, Rust, Python, Lua, C, C++, SQL, HTML, CSS]),
-  ("Front end", [React, Vue, Angular, Svelte, Next.js, Vite, web components, vanilla. Accessible, responsive, mobile-first work.]),
-  ("Mobile", [Capacitor and Cordova wrappers around a React web app, React Native, Ionic. One TypeScript codebase shipped to web, Android, and iOS.]),
-  ("Back end", [Deno, Node, Express, Payload CMS, REST+RPC APIs, WebSockets, auth/sessions, Postgres, SQLite, Kysely, Redis]),
-  ("Practice", [Testing with Vitest and Playwright, CI pipelines, semantic release, code review, technical writing]),
-  ("Ops", [Linux, Docker, dokku, nginx, self-hosted deployment. I run my own production services.]),
-  ("Working style", [Independent, written-first, comfortable across every time zone, used to owning a project from scope to delivery.]),
+  ("Frontend + Mobile", [React, Vue, Angular, Svelte, Next.js, Vite, web components; Capacitor, React Native, Ionic. Accessible, responsive work from one TypeScript codebase on web, Android and iOS.]),
+  ("Back end and data", [Deno, Node, Bun, Hono, Express, Payload CMS, REST and RPC, WebSockets, auth, Postgres, SQLite, Kysely, Redis]),
+  ("Agentic engg.", [Harness and tool design, permission gating, Vitest, Playwright, CI, code review, technical writing]),
+  ("Ops", [Linux, Docker, dokku, nginx, Just, self-hosted deployment. I run my own production services.]),
 ))
 
 == Education and Speaking

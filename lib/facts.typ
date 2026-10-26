@@ -35,9 +35,10 @@
 // A work entry plus the named bullets from its pool, in the order given.
 #let job(key, bullets: ()) = {
   let o = org(key)
+  let url = o.at("url", default: "")
   shared.work(
     title: o.title,
-    company: o.company,
+    company: if url == "" { o.company } else { link(url)[#o.company] },
     location: o.at("location", default: ""),
     dates: o.dates,
   )
@@ -54,13 +55,22 @@
   }
 }
 
-#let fact-proj(key) = {
+#let fact-proj(key, detail: true, limit: none) = {
   let p = project(key)
+  let bs = p.at("bullets", default: ())
+  if limit != none {
+    bs = bs.slice(0, calc.min(limit, bs.len()))
+  }
   shared.proj(
     p.name,
     eval(p.note, mode: "markup"),
     url: p.at("url", default: ""),
     label: p.at("label", default: ""),
+    bullets: if detail {
+      bs.map(b => eval(b, mode: "markup"))
+    } else {
+      ()
+    },
   )
 }
 
