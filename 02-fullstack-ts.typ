@@ -35,20 +35,21 @@ Client work has shipped in React, Vue, Angular and Next.js.
 
 == Selected Projects
 
+#fact-proj("rite")
 #fact-proj("homepage")
 #fact-proj("campfire")
 #fact-proj("writers-jam")
 #fact-proj("etu")
-#fact-proj("macrolight")
+#fact-proj("luacheck-ts")
 
 == Skills
 
 #skills((
   ("Languages", [TypeScript, JavaScript, Rust, Python, Lua, C, C++, SQL, HTML, CSS]),
-  ("Frontend + Mobile", [React, Vue, Angular, Svelte, Next.js, Vite, web components; Capacitor, React Native. Accessible, responsive work from one TypeScript codebase on web, Android and iOS.]),
+  ("Frontend", [React, Vue, Angular, Svelte, Next.js, Vite, web components]),
   ("Back end and data", [Deno, Node, Bun, Hono, Express, Payload CMS, REST and RPC, WebSockets, auth, Postgres, SQLite, Kysely, Redis]),
   ("Agentic engg.", [Harness and tool design, permission gating, Vitest, Playwright, CI, code review, technical writing]),
-  ("Ops", [Linux, Docker, dokku, nginx, Just, self-hosted deployment. I run my own production services.]),
+  ("Ops", [Linux, Docker, dokku, nginx, Just, SSH, Cloudflare, frp, Deno Deploy, self-hosted deployment]),
 ))
 
 == Education and Speaking

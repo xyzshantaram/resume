@@ -66,6 +66,7 @@
     eval(p.note, mode: "markup"),
     url: p.at("url", default: ""),
     label: p.at("label", default: ""),
+    github: p.at("github", default: ""),
     bullets: if detail {
       bs.map(b => eval(b, mode: "markup"))
     } else {

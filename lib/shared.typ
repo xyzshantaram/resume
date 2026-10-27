@@ -71,11 +71,12 @@
 // One compact project line: bold name, one sentence, optional link on the right.
 // basic-resume's own `project` has no description slot, so this replaces it.
 // `label` overrides the right-hand link text, for URLs too long to fit the row.
-#let proj(name, note, url: "", label: "", bullets: ()) = {
+#let proj(name, note, url: "", label: "", github: "", bullets: ()) = {
   // Show a short label but keep the full link target. A bare "github.com/" or
   // "gitlab.com/" prefix eats width from the description column and wraps the
   // line, so the host becomes an icon instead.
   let shown = if label != "" { label } else { url.replace("github.com/", "").replace("gitlab.com/", "").replace("jsr.io/", "") }
+  let github-shown = github.replace("github.com/", "")
   context {
     if target() == "html" {
       // The paged version puts the link in its own right-hand column. Keep that
@@ -90,8 +91,20 @@
           icon-html(host-icon-path(url)) + " " + shown,
         )
       }
-      let body = html.elem("span", attrs: (class: "proj-text"), html.elem("strong", name))
-      if url != "" {
+      let name-part = if url != "" and github != "" {
+        html.elem("a", attrs: (href: "https://" + url), html.elem("strong", name))
+      } else {
+        html.elem("strong", name)
+      }
+      let body = html.elem("span", attrs: (class: "proj-text"), name-part)
+      if url != "" and github != "" {
+        let gh = html.elem(
+          "a",
+          attrs: (class: "proj-link", href: "https://" + github),
+          icon-html(host-icon-path(github)) + " " + github-shown,
+        )
+        body += " · " + gh + " · " + note
+      } else if url != "" {
         body += " · " + link-part + " · " + note
       } else {
         body += " — " + note
@@ -111,11 +124,16 @@
     } else {
       block(spacing: 0.6em)[
         #{
-          let body = [*#name*]
-          if url != "" {
-            body += [ · #box(text(size: 0.9em)[#host-icon(url)#link("https://" + url)[#shown]]) · #note]
+          let body = []
+          if url != "" and github != "" {
+            body += [#link("https://" + url)[*#name*] · #box(text(size: 0.9em)[#host-icon(github)#link("https://" + github)[#github-shown]]) · #note]
           } else {
-            body += [ — #note]
+            body += [*#name*]
+            if url != "" {
+              body += [ · #box(text(size: 0.9em)[#host-icon(url)#link("https://" + url)[#shown]]) · #note]
+            } else {
+              body += [ — #note]
+            }
           }
           body
         }

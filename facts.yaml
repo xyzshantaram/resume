@@ -71,9 +71,9 @@ orgs:
         mobile-first React app with a marketplace and social feed, and tile-studio, a
         browser IDE for plugins with a live sandboxed preview.
       ditto: >
-        Built the runtime into Ditto v2, a React and TypeScript client with a Capacitor
-        shell: the embedding layer, plugin marketplace, install and permissions flow,
-        threat model, and an AI chat feature with provider settings and tools.
+        Built the runtime into Ditto v2, a React and TypeScript client: the embedding
+        layer, plugin marketplace, install and permissions flow, threat model, and a
+        widget vibe coding devkit with provider settings and tools.
       extension: >
         Owned and maintained the signer extension from Oct 2025 to Jul 2026: per-site
         grants, PSBT, Taproot and BIP-375, published to Chrome Web Store and Firefox
@@ -241,6 +241,13 @@ projects:
       - >
         Single-use challenges, per-IP and per-key limits and a daily budget keep it
         predictable under abuse. Hono on Bun, OpenRouter upstream.
+  rite:
+    name: Rite
+    url: riteapp.co.in
+    github: github.com/xyzshantaram/rite-cloud
+    note: >
+      A minimalist Markdown editor with an encrypted cloud backup service, written in
+      Rust and TypeScript.
   nostr-canvas:
     name: nostr-canvas
     url: github.com/xyzshantaram/nostr-canvas
@@ -251,9 +258,8 @@ projects:
     name: campfire
     url: campfire.js.org
     note: >
-      A pre-AI project, still maintained: a reactive web framework with a chainable DOM
-      builder, reactive stores, no build step and no virtual DOM, on npm and JSR since
-      2021.
+      A reactive web framework with a chainable DOM builder, reactive stores, no build
+      step and no virtual DOM, on npm and JSR since 2021.
   luacheck-ts:
     name: luacheck-ts
     url: jsr.io/@xyzshantaram/luacheck-ts
